@@ -1,45 +1,41 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Downham and Finch
+- An e commerce site selling custom face masks and pet bandanas.
 
-Welcome USER_NAME,
+## Site Owner Goals:
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+1. The site owner's primary goal is to sell their products to new and returning customers.
+2. The secondary goal is to showcase new products that are available to new and returning customers. 
 
-## Gitpod Reminders
+## User Stories:
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### New Users:
+1. I would like to be able to browse the site and make a purchase.
+2. I would like to register for an account so that I can create a profile, and so that my details will be stored for future visits..
+3. I would like to search the site so that I can find specific products.
 
-`python3 -m http.server`
+### Returning Users:
+4. I would like to be able to login to the site so that I can view/update my profile.
+5. I would like to be able to browse and search the site for new products that have been added to the site since my last visit.
 
-A blue button should appear to click: *Make Public*,
+### All Users:
+6. I would like to be able to reset my password should I forget it.
+7. I would like to be able to contact the site owner, so that I can ask a question, or make a complaint or a compliment.
+8. I would like to be able to submit a review of the product. 
+9. I would like to be abe to login to the site with my Facebook account.
+10. I would like to be able to pay for my purchases securely using Apple Pay.
+11. I would like to be able to pay for my purchases securely using PayPal.
 
-Another blue button should appear to click: *Open Browser*.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A blue button should appear to click: *Make Public*,
 
-Another blue button should appear to click: *Open Browser*.
+## Design:
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Wireframes
 
-## Updates Since The Instructional Video
+- The Downham and Finch sitemap can be found <a href="static/wireframes/downham-and-finch-sitemap.pdf" target="_blank">here.</a>
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- Original desktop wireframes from 04/04/21 can be found <a href="static/wireframes/downham-and-finch-desktop-wireframes.pdf" target="_blank">here.</a>
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+- Original tablet wireframes from 04/04/21 can be found <a href="static/wireframes/downham-and-finch-tablet-wireframes.pdf" target="_blank">here.</a>
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!
+- Original mobile wireframes from 04/04/21 can be found <a href="static/wireframes/downham-and-finch-mobile-wireframes.pdf" target="_blank">here.</a>
