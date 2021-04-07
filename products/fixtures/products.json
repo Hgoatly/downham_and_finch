@@ -42,4 +42,8 @@ soapy water. Rinse thoroughly and air dry. Do not tumble dry. Please note these 
 "colour": "blue", "nose-wire": "false", "description": "Handmade face mask, Simple style (one size), Washable, Made with 2 layers of cotton, 
 Soft elastic ear loops, Comfortable design, How to wash: Machine washable at 30 degrees in a laundry bag / pillow case or wash with 
 soapy water. Rinse thoroughly and air dry. Do not tumble dry. Please note these are not of medical grade. Please wash before use.", "price": "6", 
-"quantity_in_pack": "1", "quantity_in_stock": "5", "product_type": "2", "image": ""}]
+"quantity_in_pack": "1", "quantity_in_stock": "5", "product_type": "2", "image": ""}, 
+{"pk": 10, "model": "products.product", "sku": "BAN-STA-SMA", "name": "pet_bandana_stamps_fabric", "display_name": "Pet Bandana Stamps Fabric",
+"colour": "blue", "nose-wire": "false", "description": "A small pet bandana made with navy stamps fabric and a contrasting red fabric on reverse. Suitable for a 
+cat or a small dog. Measures approx 13 inches wide.", "size": "s", "price": "8", 
+"quantity_in_pack": "1", "quantity_in_stock": "5", "product_type": "3", "image": "stamp_bandana_small.jpg"},]
