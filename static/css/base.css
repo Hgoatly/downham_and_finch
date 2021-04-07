@@ -62,6 +62,11 @@ body {
 .display-4 {
     font-weight: 600;
 }
+
+.bg-black {
+    background: #000;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
