@@ -1,0 +1,45 @@
+[{"pk": 1, "model": "products.product", "sku": "MAS-PIN-3D-NW", "name": "3d_face_mask_nose_wire", "display_name": "3D Face Mask With Nose Wire",
+"colour": "pink", "nose-wire": "true", "description": "Handmade face mask, 3D style (one size), Washable, Made with 2 layers of cotton, 
+Soft elastic ear loops, Comfortable design, How to wash: Machine washable at 30 degrees in a laundry bag / pillow case or wash with 
+soapy water. Rinse thoroughly and air dry. Do not tumble dry. Please note these are not of medical grade. Please wash before use.", "price": "8", 
+"quantity_in_pack": "1", "quantity_in_stock": "5", "product_type": "1", "image": "pink_face_mask"}, 
+{"pk": 2, "model": "products.product", "sku": "MAS-PIN-3D-NNW", "name": "3d_face_mask_no_nose_wire", "display_name": "3D Face Mask Without Nose Wire", "colour": "pink",
+"nose-wire": "false", "description": "Handmade face mask, 3D style (one size), Washable, Made with 2 layers of cotton, 
+Soft elastic ear loops, Comfortable design, How to wash: Machine washable at 30 degrees in a laundry bag / pillow case or wash with 
+soapy water. Rinse thoroughly and air dry. Do not tumble dry. Please note these are not of medical grade. Please wash before use.", "price": "8", "quantity_in_pack": "1", 
+"quantity_in_stock": "5", "product_type": "1", "image": "pink_face_mask.jpg"}, 
+{"pk": 3, "model": "products.product", "sku": "MAS-SHE-3D-NW", "name": "3d_face_mask_nose_wire", "display_name": "3D Face Mask With Nose Wire",
+"colour": "sheep print", "nose-wire": "true", "description": "Handmade face mask, 3D style (one size), Washable, Made with 2 layers of cotton, 
+Soft elastic ear loops, Comfortable design, How to wash: Machine washable at 30 degrees in a laundry bag / pillow case or wash with 
+soapy water. Rinse thoroughly and air dry. Do not tumble dry. Please note these are not of medical grade. Please wash before use.", "price": "8", 
+"quantity_in_pack": "1", "quantity_in_stock": "5", "product_type": "1", "image": "sheep_face_mask.jpg"}, {"pk": 4, "model": "products.product", 
+"sku": "MAS-SHE-3D-NNW", "name": "3d_face_mask_no_nose_wire", "display_name": "3D Face Mask Without Nose Wire",
+"colour": "sheep print", "nose-wire": "false", "description": "Handmade face mask, 3D style (one size), Washable, Made with 2 layers of cotton, 
+Soft elastic ear loops, Comfortable design, How to wash: Machine washable at 30 degrees in a laundry bag / pillow case or wash with 
+soapy water. Rinse thoroughly and air dry. Do not tumble dry. Please note these are not of medical grade. Please wash before use.", "price": "8", 
+"quantity_in_pack": "1", "quantity_in_stock": "5", "product_type": "1", "image": "sheep_face_mask.jpg"}, 
+{"pk": 5, "model": "products.product", "sku": "MAS-BLA-3D-NW", "name": "3d_face_mask_nose_wire", "display_name": "3D Face Mask With Nose Wire",
+"colour": "black", "nose-wire": "true", "description": "Handmade face mask, 3D style (one size), Washable, Made with 2 layers of cotton, 
+Soft elastic ear loops, Comfortable design, How to wash: Machine washable at 30 degrees in a laundry bag / pillow case or wash with 
+soapy water. Rinse thoroughly and air dry. Do not tumble dry. Please note these are not of medical grade. Please wash before use.", "price": "13", 
+"quantity_in_pack": "2", "quantity_in_stock": "5", "product_type": "1", "image": "sheep_face_mask.jpg"}, 
+{"pk": 6, "model": "products.product", "sku": "MAS-BLA-3D-NNW", "name": "3d_face_mask_no_nose_wire", "display_name": "3D Face Mask Without Nose Wire",
+"colour": "black", "nose-wire": "false", "description": "Handmade face mask, 3D style (one size), Washable, Made with 2 layers of cotton, 
+Soft elastic ear loops, Comfortable design, How to wash: Machine washable at 30 degrees in a laundry bag / pillow case or wash with 
+soapy water. Rinse thoroughly and air dry. Do not tumble dry. Please note these are not of medical grade. Please wash before use.", "price": "13", 
+"quantity_in_pack": "2", "quantity_in_stock": "5", "product_type": "1", "image": "sheep_face_mask.jpg"},
+{"pk": 7, "model": "products.product", "sku": "MAS-BLA-SIM-NNW", "name": "simple_face_mask_no_nose_wire", "display_name": "Simple Face Mask Without Nose Wire",
+"colour": "black", "nose-wire": "false", "description": "Handmade face mask, Simple style (one size), Washable, Made with 2 layers of cotton, 
+Soft elastic ear loops, Comfortable design, How to wash: Machine washable at 30 degrees in a laundry bag / pillow case or wash with 
+soapy water. Rinse thoroughly and air dry. Do not tumble dry. Please note these are not of medical grade. Please wash before use.", "price": "6", 
+"quantity_in_pack": "1", "quantity_in_stock": "5", "product_type": "2", "image": ""},
+{"pk": 8, "model": "products.product", "sku": "MAS-RED-SIM-NNW", "name": "simple_face_mask_no_nose_wire", "display_name": "Simple Face Mask Without Nose Wire",
+"colour": "red", "nose-wire": "false", "description": "Handmade face mask, Simple style (one size), Washable, Made with 2 layers of cotton, 
+Soft elastic ear loops, Comfortable design, How to wash: Machine washable at 30 degrees in a laundry bag / pillow case or wash with 
+soapy water. Rinse thoroughly and air dry. Do not tumble dry. Please note these are not of medical grade. Please wash before use.", "price": "6", 
+"quantity_in_pack": "1", "quantity_in_stock": "5", "product_type": "2", "image": ""},
+{"pk": 9, "model": "products.product", "sku": "MAS-BLU-SIM-NNW", "name": "simple_face_mask_no_nose_wire", "display_name": "Simple Face Mask Without Nose Wire",
+"colour": "blue", "nose-wire": "false", "description": "Handmade face mask, Simple style (one size), Washable, Made with 2 layers of cotton, 
+Soft elastic ear loops, Comfortable design, How to wash: Machine washable at 30 degrees in a laundry bag / pillow case or wash with 
+soapy water. Rinse thoroughly and air dry. Do not tumble dry. Please note these are not of medical grade. Please wash before use.", "price": "6", 
+"quantity_in_pack": "1", "quantity_in_stock": "5", "product_type": "2", "image": ""}]

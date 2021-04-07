@@ -1,0 +1,7 @@
+[{"pk": 1, "model": "products.product_type", "fields": {"name": "3d_face_masks", "display_name": "3D Face Masks"}},
+{"pk": 2, "model": "products.product_type", "fields": {"name": "simple_face_masks", "display_name": "Simple Face Masks"}}, 
+{"pk": 3, "model": "products.product_type", "fields": {"name": "pet_bandanas", "display_name": "Pet Bandanas"}},
+{"pk": 4, "model": "products.product_type", "fields": {"name": "pet_bow_ties", "display_name": "Pet Bow Ties"}},
+{"pk": 5, "model": "products.product_type", "fields": {"name": "lavender_bags", "display_name": "Lavender Bags"}},
+{"pk": 6, "model": "products.product_type", "fields": {"name": "drawstring_bags", "display_name": "Drawstring Bags"}},
+{"pk": 7, "model": "products.product_type", "fields": {"name": "custom_products", "display_name": "Custom Products"}},]
