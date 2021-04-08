@@ -4,4 +4,4 @@
 {"pk": 4, "model": "products.product_type", "fields": {"name": "pet_bow_ties", "display_name": "Pet Bow Ties"}},
 {"pk": 5, "model": "products.product_type", "fields": {"name": "lavender_bags", "display_name": "Lavender Bags"}},
 {"pk": 6, "model": "products.product_type", "fields": {"name": "drawstring_bags", "display_name": "Drawstring Bags"}},
-{"pk": 7, "model": "products.product_type", "fields": {"name": "custom_products", "display_name": "Custom Products"}},]
+{"pk": 7, "model": "products.product_type", "fields": {"name": "custom_products", "display_name": "Custom Products"}}]
