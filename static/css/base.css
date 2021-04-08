@@ -30,6 +30,10 @@ body {
     width: fit-content;
 }
 
+#hero-logo {
+    margin-top: 15%;
+}
+
 .shop-now-button {
     background: black;
     color: white;
