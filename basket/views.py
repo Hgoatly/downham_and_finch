@@ -22,6 +22,5 @@ def add_to_basket(request, item_id):
     else:
         basket[item_id] = quantity
 
-    request.session['bag'] = basket
-    print(request.session['bag'])
+    request.session['basket'] = basket
     return redirect(redirect_url)
