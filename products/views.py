@@ -6,7 +6,7 @@ from .models import Product, Product_type
 
 def all_products(request):
     """ A view to show all products, including sorting and
-    searc queries. This view copied from the Boutique Ado project"""
+    search queries. This view copied from the Boutique Ado project"""
 
     products = Product.objects.all()
     query = None
@@ -21,6 +21,9 @@ def all_products(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
+
+            if sortkey == 'product_type':
+                sortkey = 'product_type__name'
 
             if 'direction' in request.GET:
                 direction = request.GET['direction']
