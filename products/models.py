@@ -31,6 +31,7 @@ class Product(models.Model):
     quantity_in_stock = models.DecimalField(
         max_digits=2, decimal_places=0, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
+    display_product = models.BooleanField(default=False, blank=True)
 
     def __str__(self):
         return self.name

@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block content %}
-<!-- This section copied from the Boutique Ado project -->
+<!-- This section copied and adapted from the Boutique Ado project -->
 <div class="overlay"></div>
     <div class="container-fluid">
         <div class="row">
@@ -53,9 +53,12 @@
                 </div>
                 </div>
                 <div class="row">
-                    {% for product in products %}
+                    
+                    {% for product in display_product %}
+                    
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
+                                
                                 {% if product.image %}
                                 <a href="{% url 'product_detail' product.id %}">
                                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -83,6 +86,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
                         {% if forloop.counter|divisibleby:1 %}
@@ -105,8 +109,9 @@
                                 <hr>
                             </div>
                         {% endif %}
-
+                    
                     {% endfor%}
+                    
                 </div>
             </div>
         </div>
