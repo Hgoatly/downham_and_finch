@@ -78,7 +78,7 @@ body {
 }
 
 .display-4 {
-    font-weight: 800;
+    font-weight: 500;
     font-size: 5rem;
 }
 
@@ -99,6 +99,15 @@ body {
 a.category-badge > span.badge:hover {
     background: #212629 !important;
     color: #fff;
+}
+
+/* End of copied code */
+.hero-logo {
+    color: #fff;
+    background-color: #000;
+    padding: 30px;
+    border-radius: .5rem;
+    border-color: transparent !important;
 }
 
 /* -------------------------------- Media Queries */
