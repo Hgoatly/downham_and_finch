@@ -6,7 +6,6 @@ class ProductAdmin(admin.ModelAdmin):
     """ This class has been copied
     and adapted from the Boutique Ado Project """
     list_display = (
-        'sku',
         'name',
         'display_name',
         'colour',
@@ -15,7 +14,7 @@ class ProductAdmin(admin.ModelAdmin):
         'image',
     )
 
-    ordering = ('sku',)
+ #   ordering = ('sku',)
 
 class Product_typeAdmin(admin.ModelAdmin):
     """ This class has been copied and 

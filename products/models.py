@@ -26,7 +26,7 @@ class Product(models.Model):
     description = models.TextField()
     has_sizes = models.BooleanField(default=False, null=True, blank=True)
     size = models.CharField(max_length=10, null=True, blank=True)
-    price = models.DecimalField(max_digits=6, decimal_places=2)
+    price = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     quantity_in_pack = models.DecimalField(
         max_digits=2, decimal_places=0, null=True, blank=True)
     quantity_in_stock = models.DecimalField(

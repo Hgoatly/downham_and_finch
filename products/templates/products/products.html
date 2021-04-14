@@ -54,8 +54,7 @@
                 </div>
                 <div class="row">
                     
-                    {% for product in display_product %}
-                    
+                    {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
                                 
@@ -86,7 +85,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+                               
                             </div>
                         </div>
                         {% if forloop.counter|divisibleby:1 %}
@@ -115,5 +114,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    
 {% endblock %}

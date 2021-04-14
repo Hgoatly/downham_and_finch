@@ -42,7 +42,7 @@
                         <form class="form" action="{% url 'add_to_basket' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
-                            {% if product.display_product %}
+                            
                             {% with product.has_sizes as s %}
                             {% if s %}
                             <div class="col">
@@ -75,7 +75,7 @@
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             {% endwith %}
-                            {% endif %}
+                            
                         </div>
                     </form>
 
