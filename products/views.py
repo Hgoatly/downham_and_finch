@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+from django.db.models.functions import Lower
 from .models import Product, Product_type
 
 
@@ -13,6 +14,7 @@ def all_products(request):
     product_types = None
     sort = None
     direction = None
+    display_product = products.filter(display_product=True)
 
     if request.GET:
         if 'sort' in request.GET:
@@ -30,7 +32,6 @@ def all_products(request):
                     sortkey = f'-{sortkey}'
 
             products = products.order_by(sortkey)
-
 
         if 'product_type' in request.GET:
             product_types = request.GET['product_type'].split(',')
@@ -54,6 +55,7 @@ def all_products(request):
         'search_term': query,
         'current_product_types': product_types,
         'current_sorting': current_sorting,
+        'display_product': display_product,
     }
 
     return render(request, 'products/products.html', context)
