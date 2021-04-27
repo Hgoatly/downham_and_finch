@@ -14,6 +14,14 @@ class UserProfile(models.Model):
     delivery information and order history.
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    phone_number = models.CharField(max_length=20, null=True, blank=True)
+    default_country = CountryField(
+                                   blank_label='Country *', null=True, blank=True)
+    default_postcode = models.CharField(max_length=20, null=True, blank=True)
+    default_town_or_city = models.CharField(max_length=40, null=True, blank=True)
+    default_street_address1 = models.CharField(max_length=80, null=True, blank=True)
+    default_street_address2 = models.CharField(max_length=80, null=True, blank=True)
+    default_county = models.CharField(max_length=80, null=True, blank=True)
 
     def __str__(self):
         return self.user.username
@@ -30,7 +38,7 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
     instance.userprofile.save()
 
 
-class Address(models.Model):
+class AdditionalAddress(models.Model):
     """
     Address model for storing attaching
     multiple addresses to a profile.
@@ -38,13 +46,18 @@ class Address(models.Model):
     user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
                                      null=True, blank=True,
                                      related_name='address')
-    phone_number = models.CharField(max_length=20, null=True, blank=True)
     country = CountryField(blank_label='Country *', null=True, blank=True)
     postcode = models.CharField(max_length=20, null=True, blank=True)
     town_or_city = models.CharField(max_length=40, null=True, blank=True)
     street_address1 = models.CharField(max_length=80, null=True, blank=True)
     street_address2 = models.CharField(max_length=80, null=True, blank=True)
     county = models.CharField(max_length=80, null=True, blank=True)
+
+    # String method defines self as street_address1,
+    # so user can recognise each address.
+    def __str__(self):
+        return self.street_address1
+
 
 @receiver(post_save, sender=User)
 def save_address(sender, instance, created, **kwargs):
