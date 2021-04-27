@@ -58,13 +58,3 @@ class AdditionalAddress(models.Model):
     def __str__(self):
         return self.street_address1
 
-
-@receiver(post_save, sender=User)
-def save_address(sender, instance, created, **kwargs):
-    """
-    Create or update the user profile
-    """
-    if created:
-        Address.objects.create(user=instance)
-    # Existing users: just save the profile
-    instance.Address.save()
