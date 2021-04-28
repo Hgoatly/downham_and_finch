@@ -46,7 +46,7 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
 
 class AdditionalAddress(models.Model):
     """
-    Address model for storing attaching
+    Address model for attaching
     multiple addresses to a profile.
     """
     user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
@@ -60,7 +60,7 @@ class AdditionalAddress(models.Model):
     country = CountryField(blank_label='Country', null=True, blank=True)
 
     # String method defines self as street_address1,
-    # so user can recognise each address.
+    # so user can recognise each address at a glance.
     def __str__(self):
         return self.street_address1
 
