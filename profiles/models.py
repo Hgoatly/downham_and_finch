@@ -44,14 +44,16 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
     instance.userprofile.save()
 
 
-class AdditionalAddress(models.Model):
+class DeliveryAddress(models.Model):
     """
-    Address model for attaching
-    multiple addresses to a profile.
+    Model for attaching multiple
+    delivery addresses to a profile.
     """
-    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
-                                     null=True, blank=True,
-                                     related_name='address')
+    user = models.ForeignKey(User, on_delete=models.SET_NULL,
+                             null=True, blank=True,
+                             related_name='user')
+    phone_number = models.CharField(
+        max_length=20, null=True, blank=True)
     street_address1 = models.CharField(max_length=80, null=True, blank=True)
     street_address2 = models.CharField(max_length=80, null=True, blank=True)
     town_or_city = models.CharField(max_length=40, null=True, blank=True)

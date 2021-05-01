@@ -26,7 +26,7 @@
         </div>
         <div class="row">
             <div class="col-12 col-lg-6">
-                <p class="text-muted">Default Delivery Information</p>
+                <p class="text-muted">Billing Information</p>
                 <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                     {% csrf_token %}
                     {{ form|crispy }}
@@ -72,7 +72,15 @@
                         </tbody>
                     </table>
                 </div>
-                {{ orders }}
+                
+            </div>
+            <div class="col-12 col-lg-6">
+                <p class="text-muted">Delivery Information</p>
+                <form class="mt-3" action="{% url 'profile' %}" method="POST" id="delivery-address-update-form">
+                    {% csrf_token %}
+                    {{ delivery_form|crispy }}
+                    <button class="btn btn-black text-uppercase float-right">Update Information</button>
+                </form>
             </div>
         </div>
 {% endblock %}
