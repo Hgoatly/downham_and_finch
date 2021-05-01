@@ -55,6 +55,7 @@ class DeliveryAddressForm(forms.ModelForm):
             'street_address1': 'Street Address 1',
             'street_address2': 'Street Address 2',
             'county': 'County',
+            'country': 'Country'
         }
 
         self.fields['postcode'].widget.attrs['autofocus'] = True

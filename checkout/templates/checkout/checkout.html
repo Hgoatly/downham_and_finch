@@ -44,7 +44,7 @@
                                 {% if item.product.image %}
                                     <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
                                 {% else %}
-                                    <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                    <img class="w-100" src="{{ MEDIA_URL }}no_image.jpg" alt="{{ product.name }}">
                                 {% endif %}
                             </a>
                         </div>
@@ -78,12 +78,12 @@
                 <p class="text-muted">Please complete the form below to submit your order</p>
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
-                    <fieldset class="rounded px-3 mb-5">
+                    <fieldset class="px-3 mb-5">
                         <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
                         {{  order_form.full_name | as_crispy_field }}
                         {{  order_form.email | as_crispy_field }}
                     </fieldset>
-                    <fieldset class="rounded px-3 mb-5">
+                    <fieldset class="px-3 mb-5">
                         <legend class="fieldset-label small text-black px-2 w-auto">Billing Address</legend>
                         {{  order_form.phone_number | as_crispy_field }}
                         {{  order_form.street_address1 | as_crispy_field }}
@@ -92,6 +92,18 @@
                         {{  order_form.postcode | as_crispy_field }}
                         {{  order_form.county | as_crispy_field }}
                         {{  order_form.country | as_crispy_field }}
+                        <button class="btn btn-black text-uppercase float-left mb-2" id="checkout-delivery-address-button" type="button">Add Delivery Address</button>
+                        <div id="checkout-delivery-form">
+                        <legend class="fieldset-label small text-black px-2 w-auto">Delivery Address</legend>
+                        {{  delivery_form.phone_number | as_crispy_field }}
+                        {{  delivery_form.street_address1 | as_crispy_field }}
+                        {{  delivery_form.street_address2 | as_crispy_field }}
+                        {{  delivery_form.town_or_city | as_crispy_field }}
+                        {{  delivery_form.postcode | as_crispy_field }}
+                        {{  delivery_form.county | as_crispy_field }}
+                        {{  delivery_form.country | as_crispy_field }}
+                        </div>
+
                         <div class="form-check form-check-inline float-right mr-0">
 							{% if user.is_authenticated %}
 								<label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
@@ -119,10 +131,10 @@
 							<span class="icon">
 								<i class="fas fa-chevron-left"></i>
 							</span>
-							<span class="font-weight-bold">Adjust Bag</span>
+							<span>Adjust Bag</span>
 						</a>
 						<button id="submit-button" class="btn btn-black rounded-0">
-							<span class="font-weight-bold">Complete Order</span>
+							<span>Complete Order</span>
 							<span class="icon">
 								<i class="fas fa-lock"></i>
 							</span>
@@ -152,4 +164,5 @@
 {{ stripe_public_key|json_script:"id_stripe_public_key" }}
 {{ client_secret|json_script:"id_client_secret" }}
 <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+<script src="{% static 'checkout/js/checkout-event-listeners.js' %}"></script>
 {% endblock %}
