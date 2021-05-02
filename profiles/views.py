@@ -56,5 +56,17 @@ def order_history(request, order_number):
     return render(request, template, context)
 
 
+def delete_delivery_address(request):
+    delivery_address = DeliveryAddress.objects.all()
+    template = 'profiles/profile.html'
+    if delivery_address:
+        delivery_address.delete()
+
+    context = {
+        'delivery_form': delivery_address
+    }
+
+    return render(request, template, context)
+
 
 
