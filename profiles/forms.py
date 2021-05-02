@@ -49,6 +49,8 @@ class DeliveryAddressForm(forms.ModelForm):
         """
         super().__init__(*args, **kwargs)
         placeholders = {
+            'full_name': 'Full Name',
+            'email': 'Email Address',
             'phone_number': 'Phone Number',
             'postcode': 'Postcode',
             'town_or_city': 'Town or City',

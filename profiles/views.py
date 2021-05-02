@@ -12,19 +12,27 @@ from checkout.models import Order
 def profile(request):
     """ Display the user's profile. """
     profile = get_object_or_404(UserProfile, user=request.user)
-    delivery_address = DeliveryAddress.objects.all()
+    delivery_address = get_object_or_404(DeliveryAddress, user=request.user)
 
-    if request.method == 'POST':
+    if request.method == "POST":
         form = UserProfileForm(request.POST, instance=profile)
-        delivery_form = DeliveryAddressForm(request.POST, instance=profile)
+        delivery_form = DeliveryAddressForm(
+            request.POST, instance=delivery_address)
         if form.is_valid():
             form.save()
             messages.success(request, 'Profile updated successfully')
-        if delivery_form.is_valid():
+            print("This is valid")
+        elif delivery_form.is_valid():
             delivery_form.save()
 
-    form = UserProfileForm(instance=profile)
-    delivery_form = DeliveryAddressForm(request.POST, instance=profile)
+        else:
+            messages.error(
+                request, 'Update failed. Please ensure the form is valid.')
+
+    else:
+        form = UserProfileForm(instance=profile)
+        delivery_form = DeliveryAddressForm(instance=delivery_address)
+
     orders = profile.orders.all()
 
     template = 'profiles/profile.html'

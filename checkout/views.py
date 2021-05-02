@@ -42,7 +42,7 @@ def checkout(request):
     """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
-    delivery_form = DeliveryAddressForm
+    delivery_form = DeliveryAddressForm()
 
     if request.method == 'POST':
         basket = request.session.get('basket', {})
@@ -65,7 +65,7 @@ def checkout(request):
             order.stripe_pid = pid
             order.original_basket = json.dumps(basket)
             order.save()
-            if delivery_form:
+            if delivery_form.is_valid():
                 delivery_form.save()
 
             for item_id, item_data in basket.items():
