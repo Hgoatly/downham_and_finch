@@ -11,28 +11,8 @@
 
 {% block content %}
 <!-- This section copied and adapted from the Boutique Ado project -->
-<div class="overlay"></div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col text-center mt-3">
-                <h2 class="logo-font">Custom Products</h2>
-                 <div class="row">
-            <div class="product-container col-10 offset-1">
-                {% for product in custom_products %}
-                <select name="custom_options" id="custom-options">
-                    <option value="{{ product.display_name }}">Name</option>
-                </select>
-                {% endfor %}
-                <hr class="w-50 mb-1"> 
-            </div>
-        </div>
-       {{ custom_products }}
-       {% for items in custom_products %}
-            {{ items.display_name }}
-       {% endfor %}
-
-       {{ fabric_choices }}
-               
+<h1>Hello</h1>
+      {{ fabric_choice }}
 {% endblock %}
 
 {% block postloadjs %}
@@ -63,4 +43,3 @@
     })
     </script>
 {% endblock %}
-   

@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Product_type, Custom,FabricChoice
+from .models import Product, Product_type, FabricChoice
 
 
 def all_products(request):
@@ -10,11 +10,11 @@ def all_products(request):
     search queries. This view copied from the Boutique Ado project"""
 
     products = Product.objects.all()
+    fabric_choice = FabricChoice.objects.all()
     query = None
     product_types = None
     sort = None
     direction = None
-    display_product = products.filter(display_product=True)
 
     if request.GET:
         if 'sort' in request.GET:
@@ -55,7 +55,7 @@ def all_products(request):
         'search_term': query,
         'current_product_types': product_types,
         'current_sorting': current_sorting,
-        'display_product': display_product,
+        'fabric_choice': fabric_choice,
     }
 
     return render(request, 'products/products.html', context)
@@ -75,12 +75,11 @@ def product_detail(request, product_id):
 
 
 def custom_products(request):
-    custom_products = Custom.objects.all()
-    fabric_choices = FabricChoice.objects.all()
+
+    products = Product.objects.filter(product_type__name=custom_products)
 
     context = {
-        'custom_products': custom_products,
-        'fabric_choices': fabric_choices,
+        'products': products,
     }
 
     return render(request, 'products/custom_products.html', context)
