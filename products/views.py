@@ -76,10 +76,12 @@ def product_detail(request, product_id):
 
 def custom_products(request):
 
-    products = Product.objects.filter(product_type__name=custom_products)
+    products = Product.objects.filter(product_type__id=7)
+    fabrics = FabricChoice.objects.all()
 
     context = {
         'products': products,
+        'fabrics': fabrics,
     }
 
     return render(request, 'products/custom_products.html', context)
