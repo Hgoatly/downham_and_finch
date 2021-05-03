@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, Product_type
+from .models import Product, Product_type, Custom, FabricChoice
 
 
 class ProductAdmin(admin.ModelAdmin):
@@ -14,10 +14,9 @@ class ProductAdmin(admin.ModelAdmin):
         'image',
     )
 
- #   ordering = ('sku',)
 
 class Product_typeAdmin(admin.ModelAdmin):
-    """ This class has been copied and 
+    """ This class has been copied and
     adapted from the Boutique Ado Project """
     list_display = (
         'display_name',
@@ -25,5 +24,28 @@ class Product_typeAdmin(admin.ModelAdmin):
     )
 
 
+class CustomAdmin(admin.ModelAdmin):
+    list_display = (
+        'category',
+        'name',
+        'display_name',
+        'has_fabric_choice',
+        'description',
+        'size',
+        'price',
+        'image',
+    )
+
+
+class FabricChoiceAdmin(admin.ModelAdmin):
+    list_display = (
+        'name',
+        'image',
+    )
+
+
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Product_type, Product_typeAdmin)
+admin.site.register(Custom, CustomAdmin)
+admin.site.register(FabricChoice, FabricChoiceAdmin)
+

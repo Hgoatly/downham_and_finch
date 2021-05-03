@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Product_type
+from .models import Product, Product_type, Custom
 
 
 def all_products(request):
@@ -72,3 +72,13 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+def custom_products(request):
+    custom_products = Custom.objects.all()
+
+    context = {
+        'custom_products': custom_products,
+    }
+
+    return render(request, 'products/custom.html', context)

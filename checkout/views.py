@@ -37,7 +37,7 @@ def cache_checkout_data(request):
 
 def checkout(request):
     """
-    This view is copied and adapted from the 
+    This view is copied and adapted from the
     Boutique Ado project.
     """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
@@ -46,7 +46,6 @@ def checkout(request):
 
     if request.method == 'POST':
         basket = request.session.get('basket', {})
-
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
