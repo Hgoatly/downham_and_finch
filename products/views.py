@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Product_type, FabricChoice
+from .forms import CustomProductForm
 
 
 def all_products(request):
@@ -78,11 +79,23 @@ def custom_products(request):
 
     products = Product.objects.filter(product_type__id=7)
     fabrics = FabricChoice.objects.all()
+    form = CustomProductForm
 
     context = {
         'products': products,
         'fabrics': fabrics,
+        'form': form,
     }
 
     return render(request, 'products/custom_products.html', context)
+
+
+def fabric_detail(request, fabric_id):
+    fabric = get_object_or_404(FabricChoice, id=fabric_id)
+
+    context = {
+        'fabric': fabric,
+    }
+
+    return render(request, 'products/fabric_detail.html', context)
 
