@@ -19,7 +19,40 @@
             </div>
         </div>
     </div> 
-        {{ products }}         
+        <form method="POST">
+            <select name="product-select" id="product-select">
+        {% for product in products %}
+        <option value="{{product.id}}">{{ product.display_name }}</option>
+        {% endfor %}
+            </select>
+        </form>      
+        <form method="POST">
+            <select name="fabric-select" id="fabric-select">
+        {% for fabric in fabrics %}
+        <option value="{{fabric.id}}">{{ fabric.display_name }}
+            <img src="{{ fabric.image.url }}" alt="{{ fabric.name }}">
+        </option>
+        {% endfor %}
+            </select>
+        </form>    
+        <form method = "POST" class="needs-validation" novalidate>
+            {% csrf_token %}
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+     <select class="custom-select">
+         {% for fabric in fabrics %}
+  <label selected>Choose Your Product</label>
+  <option value="{{ fabric.id }}">{{ fabric.display_name }}</option>
+  {% endfor %}
+</select>
+    </div>
+    </div>
+  <button class="btn btn-primary" type="submit">Submit form</button>
+</form>
+
+{% for fabric in fabrics %}
+    <img class="card-img-top img-fluid" src="{{ fabric.image.url }}" alt="{{ fabric.name }}">
+{% endfor %}
       {{ fabrics }}
 {% endblock %}
 

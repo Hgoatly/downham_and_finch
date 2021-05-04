@@ -40,6 +40,7 @@ class Product(models.Model):
 
 class FabricChoice(models.Model):
     name = models.CharField(max_length=200)
+    display_name = models.CharField(max_length=200)
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
