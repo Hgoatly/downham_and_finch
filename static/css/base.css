@@ -250,6 +250,11 @@ input[name='q']::placeholder {
     border-color: transparent !important;
 }
 
+.card-img-top {
+    height: 400px;
+    width: 400px;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
