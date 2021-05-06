@@ -50,7 +50,6 @@ card.addEventListener('change', function (event) {
 
 // Handle form submit
 var form = document.getElementById('payment-form');
-var deliveryForm = document.getElementById("checkout-delivery-form");
 
 form.addEventListener('submit', function(ev) {
     ev.preventDefault();
@@ -59,7 +58,7 @@ form.addEventListener('submit', function(ev) {
     $('#payment-form').fadeToggle(100);
     $('#loading-overlay').fadeToggle(100);
 
-     var saveInfo = Boolean($('#id-save-info').attr('checked'));
+    var saveInfo = Boolean($('#id-save-info').attr('checked'));
     // From using {% csrf_token %} in the form
     var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
     var postData = {
@@ -87,20 +86,19 @@ form.addEventListener('submit', function(ev) {
                 }
             },
             shipping: {
-                name: $.trim(deliveryForm.full_name.value),
-                phone: $.trim(deliveryForm.phone_number.value),
+                name: $.trim(form.full_name.value),
+                phone: $.trim(form.phone_number.value),
                 address: {
-                    line1: $.trim(deliveryForm.street_address1.value),
-                    line2: $.trim(deliveryForm.street_address2.value),
-                    city: $.trim(deliveryForm.town_or_city.value),
-                    country: $.trim(deliveryForm.country.value),
-                    postal_code: $.trim(deliveryForm.postcode.value),
-                    state: $.trim(deliveryForm.county.value),
+                    line1: $.trim(form.street_address1.value),
+                    line2: $.trim(form.street_address2.value),
+                    city: $.trim(form.town_or_city.value),
+                    country: $.trim(form.country.value),
+                    postal_code: $.trim(form.postcode.value),
+                    state: $.trim(form.county.value),
                 }
             },
         }).then(function(result) {
             if (result.error) {
-                console.log(result.error)
                 var errorDiv = document.getElementById('card-errors');
                 var html = `
                     <span class="icon" role="alert">

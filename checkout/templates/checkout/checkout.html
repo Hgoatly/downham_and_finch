@@ -92,8 +92,6 @@
                         {{  order_form.postcode | as_crispy_field }}
                         {{  order_form.county | as_crispy_field }}
                         {{  order_form.country | as_crispy_field }}
-                        <button class="btn btn-black text-uppercase float-left mb-2" id="checkout-delivery-address-button" type="button">Add Delivery Address</button>
-                       
 
                         <div class="form-check form-check-inline float-right mr-0">
 							{% if user.is_authenticated %}
@@ -137,18 +135,6 @@
 							<span>Your card will be charged <strong>£{{ grand_total|floatformat:2 }}</strong></span>
 						</p>
                     </div>
-                </form>
-                <form>
-                 <div id="checkout-delivery-form">
-                        <legend class="fieldset-label small text-black px-2 w-auto">Delivery Address</legend>
-                        {{  delivery_form.phone_number | as_crispy_field }}
-                        {{  delivery_form.street_address1 | as_crispy_field }}
-                        {{  delivery_form.street_address2 | as_crispy_field }}
-                        {{  delivery_form.town_or_city | as_crispy_field }}
-                        {{  delivery_form.postcode | as_crispy_field }}
-                        {{  delivery_form.county | as_crispy_field }}
-                        {{  delivery_form.country | as_crispy_field }}
-                        </div>
                 </form>
             </div>
         </div>

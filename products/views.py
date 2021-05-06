@@ -92,9 +92,11 @@ def custom_products(request):
 
 def fabric_detail(request, fabric_id):
     fabric = get_object_or_404(FabricChoice, id=fabric_id)
+    products = Product.objects.filter(product_type__id=7)
 
     context = {
         'fabric': fabric,
+        'products': products,
     }
 
     return render(request, 'products/fabric_detail.html', context)
