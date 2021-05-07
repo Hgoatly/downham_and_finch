@@ -21,14 +21,10 @@ def profile(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Profile updated successfully')
-            print("This is valid")
-        elif delivery_form.is_valid():
-            delivery_form.save()
 
         else:
             messages.error(
                 request, 'Update failed. Please ensure the form is valid.')
-
     else:
         form = UserProfileForm(instance=profile)
         delivery_form = DeliveryAddressForm(instance=delivery_address)
