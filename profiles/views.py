@@ -2,13 +2,14 @@
 
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
-
+from django.contrib.auth.decorators import login_required
 from .models import UserProfile, DeliveryAddress
 from .forms import UserProfileForm, DeliveryAddressForm
 
 from checkout.models import Order
 
 
+@login_required
 def profile(request):
     """ Display the user's profile. """
     profile = get_object_or_404(UserProfile, user=request.user)
@@ -58,19 +59,3 @@ def order_history(request, order_number):
     }
 
     return render(request, template, context)
-
-
-def delete_delivery_address(request):
-    delivery_address = DeliveryAddress.objects.all()
-    template = 'profiles/profile.html'
-    if delivery_address:
-        delivery_address.delete()
-
-    context = {
-        'delivery_form': delivery_address
-    }
-
-    return render(request, template, context)
-
-
-
