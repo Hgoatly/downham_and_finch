@@ -28,7 +28,6 @@ def profile(request):
                 request, 'Update failed. Please ensure the form is valid.')
     else:
         form = UserProfileForm(instance=profile)
-        delivery_form = DeliveryAddressForm(instance=delivery_address)
 
     orders = profile.orders.all()
 
@@ -37,8 +36,6 @@ def profile(request):
         'form': form,
         'orders': orders,
         'on_profile_page': True,
-        'delivery_address': delivery_address,
-        'delivery_form': delivery_form,
     }
 
     return render(request, template, context)

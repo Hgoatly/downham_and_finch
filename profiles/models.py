@@ -44,25 +44,3 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
     instance.userprofile.save()
 
 
-class DeliveryAddress(models.Model):
-    """
-    Model for attaching multiple
-    delivery addresses to a profile.
-    """
-    user = models.ForeignKey(User, on_delete=models.SET_NULL,
-                             null=True, blank=True,
-                             related_name='user')
-    phone_number = models.CharField(
-        max_length=20, null=True, blank=True)
-    street_address1 = models.CharField(max_length=80, null=True, blank=True)
-    street_address2 = models.CharField(max_length=80, null=True, blank=True)
-    town_or_city = models.CharField(max_length=40, null=True, blank=True)
-    county = models.CharField(max_length=80, null=True, blank=True)
-    postcode = models.CharField(max_length=20, null=True, blank=True)
-    country = CountryField(blank_label='Country', null=True, blank=True)
-
-    # String method defines self as street_address1,
-    # so user can recognise each address at a glance.
-    def __str__(self):
-        return self.street_address1
-
