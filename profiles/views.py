@@ -17,8 +17,6 @@ def profile(request):
 
     if request.method == "POST":
         form = UserProfileForm(request.POST, instance=profile)
-        delivery_form = DeliveryAddressForm(
-            request.POST, instance=delivery_address)
         if form.is_valid():
             form.save()
             messages.success(request, 'Profile updated successfully')
