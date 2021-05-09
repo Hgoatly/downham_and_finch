@@ -142,7 +142,7 @@ def delete_product(request, product_id):
 
 
 def custom_products(request):
-
+    """ Display custom product options """
     products = Product.objects.filter(product_type__id=7)
     fabrics = FabricChoice.objects.all()
     form = CustomProductForm
