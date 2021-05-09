@@ -17,7 +17,12 @@
                 <hr>
                 <h2 class="logo-font mb-4">My Wishlist</h2>
                 <hr>
-                {{ wishlist }}
+                
+                {% for item in my_wishlist %}
+                    {{ item.name }}
+                {% endfor %}
+                
             </div>
         </div>
+        
 {% endblock %}

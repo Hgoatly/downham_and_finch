@@ -5,8 +5,14 @@ from products.models import Product
 
 def view_wishlist(request):
     """ A view that returns the wishlist contents. """
+    wishlist = request.session.get('wishlist', {})
 
-    return render(request, 'wishlist/wishlist.html')
+    template = 'wishlist/wishlist.html'
+    context = {
+        'wishlist': wishlist
+    }
+
+    return render(request, template, context)
 
 
 def add_to_wishlist(request, item_id):
@@ -14,22 +20,15 @@ def add_to_wishlist(request, item_id):
 
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity') or 1)
-    wishlist = request.session.get('wishlist', {})
+    my_wishlist = request.session.get('wishlist', {})
 
-    if item_id in list(wishlist.keys()):
-        wishlist[item_id] += quantity
-        messages.success(request, f'Updated {product.display_name} quantity to {wishlist[item_id]}')
-    else:
-        wishlist[item_id] = quantity
-        messages.success(
-            request, f'Added {product.display_name} to your wishlist')
+    my_wishlist.product.add(product)
 
-    request.session['wishlist'] = wishlist
     template = 'wishlist/wishlist.html'
     context = {
         'product': product,
         'quantity': quantity,
-        'wishlist': wishlist,
+        'my_wishlist': my_wishlist,
     }
 
     return render(request, template, context)
