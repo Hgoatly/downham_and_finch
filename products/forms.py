@@ -1,4 +1,4 @@
-# This file is copied and adapted from Boutique Ado. 
+# This file is copied and adapted from Boutique Ado.
 
 from django import forms
 from .widgets import CustomClearableFileInput
@@ -34,4 +34,3 @@ class CustomProductForm(forms.ModelForm):
         placeholders = {
             'display_name': 'display_name',
         }
-
