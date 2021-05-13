@@ -12,7 +12,7 @@ class FaqForm(forms.ModelForm):
         def __init__(self, *args, **kwargs):
             super().__init__(*args, **kwargs)
 
-        placeholders = {
-            'question': 'question',
-            'answer': 'answer',
-        }
+    placeholders = {
+        'question': 'question',
+        'answer': 'answer',
+    }

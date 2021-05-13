@@ -95,9 +95,7 @@
                                 <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Basket">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                            
                             {% endwith %}
-                            <a href="{% url 'add_to_wishlist' product.id %}">Add to Wishlist</a> 
                             
                         </div>
                     </form>

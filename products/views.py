@@ -118,7 +118,8 @@ def edit_product(request, product_id):
             messages.success(request, 'Product successfully updated!')
             return redirect(reverse(product_detail, args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please check your form.')
+            messages.error(
+                request, 'Failed to update product. Please check your form.')
     form = ProductForm(instance=product)
     messages.info(request, f'You are editing {product.name}')
 
