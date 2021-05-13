@@ -67,6 +67,18 @@
             
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                       <li class="list-inline-item dropdown">
+                        <a class="text-black nav-link" href="#" id="about" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="text-center">
+                                <div><i class="fas fa-book fa-lg"></i></div>
+                                <p class="my-0">About</p>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu border-0" aria-labelledby="about">
+                                <a href="" class="dropdown-item">About</a>
+                                <a href="{% url 'faq' %}" class="dropdown-item">Faqs</a>
+                        </div>
+                    </li>
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
@@ -118,7 +130,6 @@
                 <h4 class="my-1">Free delivery on orders over £{{ free_delivery_threshold }}</h4>
             </div>
         </div>
-        <!-- End of Copied code -->
     </header>
 
     {% if messages %}
