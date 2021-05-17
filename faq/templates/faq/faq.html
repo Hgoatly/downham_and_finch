@@ -40,14 +40,14 @@
 <!-- Button trigger modal -->
 <p class="text-center">
     <small class="ml-2">
-<a type="button" class="text-danger" data-toggle="modal" data-target="#deleteFaqModal">
+<a type="button" class="text-danger" data-toggle="modal" data-target="#delete-{{ f.id }}">
   Delete Faq
 </a> |
 <a href="{% url 'edit_faq' f.id %}">Edit Faq</a>
 </small>
 </p>
 <!-- Modal -->
-<div class="modal fade" id="deleteFaqModal" tabindex="-1" role="dialog" aria-labelledby="deleteFaqModal" aria-hidden="true">
+<div class="modal fade" id="delete-{{ f.id }}" tabindex="-1" role="dialog" aria-labelledby="deleteFaqModal" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">

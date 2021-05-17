@@ -48,7 +48,7 @@ def delete_faq(request, faq_id):
         return redirect(reverse('home'))
 
     faq = get_object_or_404(Faq, pk=faq_id)
-    faq.delete(args=[faq.id])
+    faq.delete()
     messages.success(request, 'faq deleted!')
     return redirect(reverse('faq'))
 
@@ -65,8 +65,8 @@ def edit_faq(request, faq_id):
         form = FaqForm(request.POST, instance=faq)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Product successfully updated!')
-            return redirect(reverse(faq, args=[faq.id]))
+            messages.success(request, 'FAQ successfully updated!')
+            return redirect(reverse('faq'))
         else:
             messages.error(
                 request, 'Unable to update faq. Please check your form.')
