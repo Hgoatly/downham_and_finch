@@ -46,7 +46,7 @@ body {
 
 .btn-black {
     background: black;
-    color: white;
+    color: #D4AF37;
 }
 
 .btn-outline-black {
@@ -284,6 +284,7 @@ input[name='q']::placeholder {
 }
 
 #footer {
+    position: static;
     background-color: #000;
     color: #D4AF37;
 }

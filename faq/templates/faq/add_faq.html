@@ -17,7 +17,7 @@
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col text-center">
                 <h2 class="text-muted">Add a Faq</h2>
                 <hr>
             </div>
@@ -29,7 +29,7 @@
                 <form method="POST" action="{% url 'add_faq' %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                         {{ form|crispy }}
-                    <div class="text-right">
+                    <div class="text-right mt-5 mb-5">
                         <a class="btn btn-outline-black" href="{% url 'add_faq' %}">Cancel</a>
                         <button class="btn btn-black" type="submit">Add Faq</button>
                     </div>
