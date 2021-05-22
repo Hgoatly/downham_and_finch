@@ -70,9 +70,11 @@ def product_detail(request, product_id):
     This view copied from the Boutique Ado project"""
 
     product = get_object_or_404(Product, pk=product_id)
+    fabrics = FabricChoice.objects.all()
 
     context = {
         'product': product,
+        'fabrics': fabrics,
     }
 
     return render(request, 'products/product_detail.html', context)

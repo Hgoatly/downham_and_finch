@@ -53,12 +53,12 @@
                                 </select>
                             </div>
                             {% endif %}
-                            {% if fabric_choice %}
+                            {% if product.has_fabric_choice %}
                             <div class="col">
                                 <p><strong>Fabric:</strong></p>
                                 <select class="form-control w-50" name="fabric-choice" id="fabric-choice">
-                                    {% for fabric in fabric_choice %}
-                                    <option value="s">{{ fabric_choice.name }}</option>
+                                    {% for fabric in fabrics %}
+                                    <option>{{ fabric.display_name }}</option>
                                     {% endfor %}
                                 </select>
                             </div>
