@@ -38,8 +38,7 @@
     <small class="ml-2">
 <a type="button" class="text-danger" data-toggle="modal" data-target="#delete-{{ r.id }}">
   Delete Review
-</a> |
-<a href="">Edit Review</a>
+</a>
 </small>
 </p>
 <!-- Modal -->
@@ -57,7 +56,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-black" data-dismiss="modal">Cancel</button>
-        <a class="btn btn-danger" href="">Yes</a>
+        <a class="btn btn-danger" href="{% url 'delete_review' r.id %}">Yes</a>
       </div>
     </div>
   </div>
@@ -65,7 +64,7 @@
 </div>
 {% endfor %}
 <div class="col text-center mt-5 mb-5">
-    <a class="btn btn-black" href="">Add Review</a>
+    <a class="btn btn-black" href="{% url 'add_review' %}">Add Review</a>
 </div>   
 {% endblock %}
 
