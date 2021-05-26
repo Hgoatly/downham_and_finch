@@ -13,21 +13,21 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
-            <h2 class="logo-font">Faqs</h2>
+            <h2 class="logo-font">Reviews</h2>
             <hr class="w-50 mb-1">
         </div>
     </div>
     
     
-            {% for f in faqs %}
+            {% for r in reviews %}
             <div class="col text-center mt-5">
                 <h5>
                 <i class="fas fa-question-circle"></i>
-            {{ f.question }}</h5>
+            {{ r.name }}</h5>
             <div class="col text-center mt-3">
                 <h5>
                 <i class="fas fa-check-circle"></i>
-            {{ f.answer }}
+            {{ r.review }}
             </h5>
             </div>
             </div>
@@ -36,28 +36,28 @@
 <!-- Button trigger modal -->
 <p class="text-center">
     <small class="ml-2">
-<a type="button" class="text-danger" data-toggle="modal" data-target="#delete-{{ f.id }}">
-  Delete Faq
+<a type="button" class="text-danger" data-toggle="modal" data-target="#delete-{{ r.id }}">
+  Delete Review
 </a> |
-<a href="{% url 'edit_faq' f.id %}">Edit Faq</a>
+<a href="">Edit Review</a>
 </small>
 </p>
 <!-- Modal -->
-<div class="modal fade" id="delete-{{ f.id }}" tabindex="-1" role="dialog" aria-labelledby="deleteFaqModal" aria-hidden="true">
+<div class="modal fade" id="delete-{{ r.id }}" tabindex="-1" role="dialog" aria-labelledby="deleteFaqModal" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Delete Faq</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Delete Review</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        Would you really like to delete this Faq?
+        Would you really like to delete this Review?
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-black" data-dismiss="modal">Cancel</button>
-        <a class="btn btn-danger" href="{% url 'delete_faq' f.id %}">Yes</a>
+        <a class="btn btn-danger" href="">Yes</a>
       </div>
     </div>
   </div>
@@ -65,7 +65,7 @@
 </div>
 {% endfor %}
 <div class="col text-center mt-5 mb-5">
-    <a class="btn btn-black" href="{% url 'add_faq' %}">Add Faq</a>
+    <a class="btn btn-black" href="">Add Review</a>
 </div>   
 {% endblock %}
 

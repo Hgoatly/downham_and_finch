@@ -27,8 +27,6 @@ def add_to_basket(request, item_id):
         size = request.POST['product_size']
     basket = request.session.get('basket', {})
 
-    if product has.options:
-
     if size:
         if item_id in list(basket.keys()):
             if size in basket[item_id]['items_by_size'].keys():

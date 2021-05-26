@@ -7,13 +7,10 @@ from django.contrib import messages
 
 def faq(request):
     faqs = Faq.objects.all()
-    form = FaqForm(request.POST)
 
     context = {
         'faqs': faqs,
-        'form': form
     }
-    print(faqs[0].id)
     return render(request, 'faq/faq.html', context)
 
 
