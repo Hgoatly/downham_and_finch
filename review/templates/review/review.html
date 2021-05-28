@@ -32,6 +32,7 @@
             </div>
             </div>
 
+{% if request.user.is_superuser %}            
 <!-- Modal Code copied from Bootsrap -->
 <!-- Button trigger modal -->
 <p class="text-center">
@@ -62,6 +63,7 @@
   </div>
 </div>
 </div>
+{% endif %}
 {% endfor %}
 <div class="col text-center mt-5 mb-5">
     <a class="btn btn-black" href="{% url 'add_review' %}">Add Review</a>
