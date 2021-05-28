@@ -14,12 +14,8 @@ def add_to_basket(request, item_id):
     """ A view that adds a quantity of the selected product to the shopping basket.
     This view is copied from the Boutique Ado project."""
 
-    fabric = request.POST.get("fabric_id")
-    print("custom fabric:", fabric)
-
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity') or 1)
-    fabric = get_object_or_404(FabricChoice, pk=fabric_id)
     redirect_url = request.POST.get('redirect_url')
     size = None
 
