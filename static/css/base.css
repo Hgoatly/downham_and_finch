@@ -271,6 +271,10 @@ input[name='q']::placeholder {
 }
 
 /* End of copied code */
+.main-logo, .nav-link, .nav-item {
+    color: #D4AF37;
+}
+
 .hero-logo {
     color: #D4AF37;
     background-color: #000;
@@ -290,8 +294,9 @@ input[name='q']::placeholder {
     color: #D4AF37;
 }
 
-.footer-hr {
+.footer-hr, .header-hr {
     background-color: #D4AF37;
+    padding: 0px;
 }
 
 .footer-item {
@@ -302,6 +307,19 @@ input[name='q']::placeholder {
 .footer-item:hover {
     text-decoration: none;
     color: #fff;
+}
+
+.delivery-banner {
+    padding: 0px;
+} 
+
+.search-button {
+    color: #D4AF37;
+}
+
+.search-box {
+    color: #D4AF37;
+    background-color: #000;
 }
 /* -------------------------------- Media Queries */
 
