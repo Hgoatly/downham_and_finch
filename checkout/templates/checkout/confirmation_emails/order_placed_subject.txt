@@ -1,0 +1,1 @@
+Congratulations! Someone has placed an order. The order number is: {{ order.order_number }}
