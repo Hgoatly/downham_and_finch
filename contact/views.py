@@ -6,9 +6,9 @@ from .forms import ContactForm
 
 def contact(request):
     """ Customer contact form view """
-    form_class = ContactForm
+    contact_form = ContactForm
     if request.method =="POST":
-        form = form_class(data=request.POST)
+        form = contact_form(data=request.POST)
         
         if form.is_valid():
             name = request.POST.get('name', '')
@@ -23,7 +23,7 @@ def contact(request):
         )
         return redirect('contact')
     context = {
-        'form': form_class,
+        'form': contact_form,
         }
 
     return render(request, 'contact/contact.html', context)
