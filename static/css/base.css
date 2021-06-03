@@ -334,6 +334,11 @@ input[name='q']::placeholder {
 input {
     border-color: #D4AF37 !important;
 }
+
+.fa-bars {
+    color: #D4AF37;
+    font-size: 28px;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -365,5 +370,25 @@ input {
     }
     body {
         height: calc(100vh - 116px);
+    }
+    .display-4.logo-font {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    .nav-link {
+        padding: 0.15rem;
+    }
+    .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+    .navbar-toggler {
+        padding: .6rem .6rem;
+        font-size: 1rem;
+    }
+    #delivery-banner h4 {
+        font-size: .9rem;
+    }
+    #hero-logo {
+        margin-top: 15rem;
     }
 }
