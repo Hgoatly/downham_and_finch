@@ -30,7 +30,7 @@
                 <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <button class="btn btn-black text-uppercase float-right" type="submit">Update Information</button>
+                    <button class="btn btn-black text-uppercase float-right mb-3" type="submit">Update Information</button>
                     <button id="add-delivery-button" class="btn btn-black text-uppercase float-left" type="button">Add Delivery Address</button>
                 </form>
             </div>
@@ -74,6 +74,8 @@
                         </tbody>
                     </table>
                 </div>
+            </div>
+        </div>
 {% endblock %}
 
 {% block postloadjs  %}
