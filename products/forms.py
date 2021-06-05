@@ -23,14 +23,3 @@ class ProductForm(forms.ModelForm):
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black'
 
-
-class CustomProductForm(forms.ModelForm):
-    class Meta:
-        model = Product
-        fields = ['display_name']
-
-        def __init__(self, *args, **kwargs):
-            super().__init__(*args, **kwargs)
-        placeholders = {
-            'display_name': 'display_name',
-        }
