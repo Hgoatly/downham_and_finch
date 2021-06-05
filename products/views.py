@@ -14,7 +14,6 @@ def all_products(request):
     search queries. This view copied from the Boutique Ado project"""
 
     products = Product.objects.all()
-    fabric_choice = FabricChoice.objects.all()
     query = None
     product_types = None
     sort = None
@@ -59,7 +58,6 @@ def all_products(request):
         'search_term': query,
         'current_product_types': product_types,
         'current_sorting': current_sorting,
-        'fabric_choice': fabric_choice,
     }
 
     return render(request, 'products/products.html', context)
@@ -70,11 +68,11 @@ def product_detail(request, product_id):
     This view copied from the Boutique Ado project"""
 
     product = get_object_or_404(Product, pk=product_id)
-    fabrics = FabricChoice.objects.all()
+    fabric = FabricChoice.objects.all()
 
     context = {
         'product': product,
-        'fabrics': fabrics,
+        'fabric': fabric,
     }
 
     return render(request, 'products/product_detail.html', context)

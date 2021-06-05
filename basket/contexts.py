@@ -14,7 +14,7 @@ def basket_contents(request):
 
     for item_id, item_data in basket.items():
         if isinstance(item_data, int):
-            product = get_object_or_404(Product, pk=item_id)
+            product = get_object_or_404(Product, pk=item_id) 
             total += item_data * product.price
             product_count += item_data
             basket_items.append({
@@ -35,7 +35,7 @@ def basket_contents(request):
                 })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
-        delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE/100)
+        delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
         free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
 
     else:
@@ -51,6 +51,7 @@ def basket_contents(request):
         'free_delivery_delta': free_delivery_delta,
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
         'grand_total': grand_total,
+        'delivery': delivery,
     }
 
     return context

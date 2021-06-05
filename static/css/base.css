@@ -34,7 +34,7 @@ body {
 .logo-font {
     font-family: 'Parisienne', cursive;
     font-weight: 800;
-    font-size: 40px;
+    font-size: 50px;
 }
 #delivery-banner {
     background: #000;
@@ -285,6 +285,10 @@ input[name='q']::placeholder {
     color: #D4AF37;
 }
 
+.nav-link:hover {
+    text-decoration: none;
+    color: #fff;
+}
 .hero-logo {
     color: #D4AF37;
     background-color: #000;

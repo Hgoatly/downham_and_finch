@@ -46,20 +46,10 @@
                             {% if s %}
                             <div class="col">
                                 <p><strong>Size:</strong></p>
-                                <select class="form-control w-50" name="product-size" id="product-size">
+                                <select class="form-control w-50" name="product_size" id="product_size">
                                     <option value="s">S</option>
                                     <option value="m">M</option>
                                     <option value="l">L</option>
-                                </select>
-                            </div>
-                            {% endif %}
-                            {% if product.has_fabric_choice %}
-                            <div class="col">
-                                <p><strong>Fabric:</strong></p>
-                                <select class="form-control w-50" name="fabric-choice" id="fabric-choice">
-                                    {% for fabric in fabrics %}
-                                    <option>{{ fabric.display_name }}</option>
-                                    {% endfor %}
                                 </select>
                             </div>
                             {% endif %}
