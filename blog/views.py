@@ -1,4 +1,8 @@
 from django.shortcuts import render
 from .models import Blog
 
-# Create your views here.
+
+def blog(request):
+    """ A view to render blog posts """
+
+    return render(request, 'blog/blog.html')
