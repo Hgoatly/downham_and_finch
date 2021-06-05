@@ -68,11 +68,9 @@ def product_detail(request, product_id):
     This view copied from the Boutique Ado project"""
 
     product = get_object_or_404(Product, pk=product_id)
-    fabric = FabricChoice.objects.all()
 
     context = {
         'product': product,
-        'fabric': fabric,
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -148,25 +146,13 @@ def delete_product(request, product_id):
 def custom_products(request):
     """ Display custom product options """
     products = Product.objects.filter(product_type__id=7)
-    fabrics = FabricChoice.objects.all()
     form = CustomProductForm
 
     context = {
         'products': products,
-        'fabrics': fabrics,
         'form': form,
     }
 
     return render(request, 'products/custom_products.html', context)
 
 
-def fabric_detail(request, fabric_id):
-    fabric = get_object_or_404(FabricChoice, id=fabric_id)
-    products = Product.objects.filter(product_type__id=7)
-
-    context = {
-        'fabric': fabric,
-        'products': products,
-    }
-
-    return render(request, 'products/fabric_detail.html', context)
