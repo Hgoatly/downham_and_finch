@@ -6,7 +6,7 @@ from django.conf import settings
 
 from django_countries.fields import CountryField
 
-from products.models import Product, FabricChoice
+from products.models import Product
 from profiles.models import UserProfile
 
 
@@ -83,8 +83,6 @@ class OrderLineItem(models.Model):
     lineitem_total = models.DecimalField(
         max_digits=6, decimal_places=2,
         null=False, blank=False, editable=False)
-    fabric_choice = models.ForeignKey(
-        FabricChoice, null=True, blank=True, on_delete=models.SET_NULL)
 
     def save(self, *args, **kwargs):
         """

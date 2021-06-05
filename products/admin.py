@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, Product_type, FabricChoice
+from .models import Product, Product_type
 
 
 class ProductAdmin(admin.ModelAdmin):
@@ -23,15 +23,7 @@ class Product_typeAdmin(admin.ModelAdmin):
         'name',
     )
 
-
-class FabricChoiceAdmin(admin.ModelAdmin):
-    list_display = (
-        'name',
-        'image',
-    )
-
-
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Product_type, Product_typeAdmin)
-admin.site.register(FabricChoice, FabricChoiceAdmin)
+
 

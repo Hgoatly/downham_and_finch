@@ -339,10 +339,6 @@ input[name='q']::placeholder {
     background-color: #000;
 }
 
-input {
-    border-color: #D4AF37 !important;
-}
-
 .fa-bars {
     color: #D4AF37;
     font-size: 28px;

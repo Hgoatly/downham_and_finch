@@ -41,14 +41,5 @@ class Product(models.Model):
         return self.name
 
 
-class FabricChoice(models.Model):
-    product = models.ForeignKey(
-        'Product', null=True, blank=True, on_delete=models.SET_NULL)
-    name = models.CharField(max_length=200)
-    display_name = models.CharField(max_length=200)
-    image = models.ImageField(null=True, blank=True)
-
-    def __str__(self):
-        return self.name
 
 
