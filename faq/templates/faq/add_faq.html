@@ -6,8 +6,9 @@
     <div class="container header-container">
         <div class="row">
             <div class="col text-center">
-                <hr>
-                <h2 class="logo-font mb-4">Faqs</h2>
+                <hr class="w-50 mb-1">
+                <h2 class="logo-font m-4">Faqs</h2>
+                <hr class="w-50 mb-1">
             </div>
         </div>
     </div>
@@ -19,7 +20,6 @@
         <div class="row">
             <div class="col text-center">
                 <h2 class="text-muted">Add a Faq</h2>
-                <hr>
             </div>
         </div>
 
@@ -30,7 +30,7 @@
                     {% csrf_token %}
                         {{ form|crispy }}
                     <div class="text-right mt-5 mb-5">
-                        <a class="btn btn-outline-black" href="{% url 'add_faq' %}">Cancel</a>
+                        <a class="btn btn-outline-black" href="{% url 'faq' %}">Cancel</a>
                         <button class="btn btn-black" type="submit">Add Faq</button>
                     </div>
                 </form>
