@@ -6,8 +6,9 @@
     <div class="container header-container">
         <div class="row">
             <div class="col text-center">
-                <hr>
-                <h2 class="logo-font mb-4">Faqs</h2>
+                <hr class="w-50 mb-1">
+                <h2 class="logo-font m-4">Faqs</h2>
+                <hr class="w-50 mb-1">
             </div>
         </div>
     </div>
@@ -17,12 +18,10 @@
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
-            <div class="col">
-                <h2 class="text-muted">Edit a Faq</h2>
-                <hr>
+            <div class="col text-center">
+                <h2 class="text-muted">Edit a Faq</h2>    
             </div>
         </div>
-
         <div class="row">
             {% if user.is_superuser %}
             <div class="col-12 col-lg-4 offset-4">
