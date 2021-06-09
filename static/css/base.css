@@ -329,6 +329,15 @@ input[name='q']::placeholder {
     color: #fff;
 }
 
+.phone-number {
+    text-decoration: none;
+    color: #D4AF37; 
+}
+
+.phone-number:hover {
+    text-decoration: none;
+    color: #fff; 
+}
 .delivery-banner {
     padding: 0px;
 } 
