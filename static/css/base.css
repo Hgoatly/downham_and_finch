@@ -355,6 +355,10 @@ input[name='q']::placeholder {
     color: #D4AF37;
     font-size: 28px;
 }
+
+.blog-title {
+    font-size: 2.5rem;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

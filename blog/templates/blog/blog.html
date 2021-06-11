@@ -13,10 +13,29 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
-            <h2 class="logo-font">Blog</h2>
+            <hr class="w-50 mb-1">
+            <h2 class="logo-font m-4">Blog</h2>
             <hr class="w-50 mb-1">
         </div>
     </div>
-</div>  
+</div>
+
+{% for b in blogs %}
+
+    <div class="col text-center mt-5">
+        <h5 class="blog-title">
+            {{ b.title }}</h5>
+            <div class="col text-center mt-3">
+            {% if b.image %}
+            <img src="{{ b.image.url }}" alt="">
+            {% endif %}
+        </div>
+        <div class="col text-center mt-3">
+            <h5>
+                {{ b.content }}
+            </h5>    
+        </div>
+    </div>
+{% endfor %}
 {% endblock %}
 
