@@ -305,6 +305,11 @@ input[name='q']::placeholder {
     width: 400px;
 }
 
+.card-img-bottom {
+    height: 400px;
+    width: 400px;
+}
+
 #footer {
     position: static;
     background-color: #000;
