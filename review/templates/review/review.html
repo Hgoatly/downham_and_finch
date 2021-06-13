@@ -69,6 +69,7 @@
 
 {% block postloadjs %}
     {{ block.super }}
+    <!-- JQuery for modal from https://getbootstrap.com/ -->
         <script type="text/javascript">
             $('#myModal').on('shown.bs.modal', function () {
             $('#myInput').trigger('focus')
