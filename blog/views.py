@@ -13,3 +13,16 @@ def blog(request):
         'blogs': blogs,
     }
     return render(request, 'blog/blog.html', context)
+
+
+@login_required
+def deleteBlog(request, blog_id):
+    """ Delete a blog post from the db """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, you are not authorised do that.')
+        return redirect(reverse('blog'))
+
+    blog = get_object_or_404(Blog, pk=blog_id)
+    blog.delete()
+    messages.success(request, 'Blog deleted!')
+    return redirect(reverse('blog'))
