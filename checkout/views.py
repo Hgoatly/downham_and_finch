@@ -174,16 +174,27 @@ def checkout_success(request, order_number):
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
-    messages.success(request, f'Order successful! \
-        Your order number is {order_number}. \
-        A confirmation email will be sent to {order.email}.')
+                # Additional check to prevent order details from being displayed if url is copied and pasted.
+                if 'user' in request.session:
+                    messages.success(request, f'Order successful! \
+                        Your order number is {order_number}. \
+                        A confirmation email will be sent to {order.email}.')
 
     if 'basket' in request.session:
         del request.session['basket']
 
-    template = 'checkout/checkout_success.html'
-    context = {
-        'order': order,
-    }
+        template = 'checkout/checkout_success.html'
+        context = {
+            'order': order,
+        }
 
-    return render(request, template, context)
+        return render(request, template, context)
+
+    # Send user back to homepage if they try and paste the url from another user's checkout confirmation. 
+    if 'user' not in request.session:
+        return redirect('home')
+
+
+def payment_failure():
+    pass
+
