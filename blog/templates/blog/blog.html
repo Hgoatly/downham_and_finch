@@ -24,7 +24,8 @@
 <!-- Bootstrap card. Copied and adapted from https://getbootstrap.com/ -->
 <div class="card text-center m-5">
   <div class="card-body">
-    <h5 class="card-title">{{ b.title }}</h5>
+      <a href="{% url 'blog_detail' b.id %}">
+    <h5 class="card-title">{{ b.title }}</h5></a>
     <p class="card-text">{{ b.content }}</p>
     <p class="card-text"><small class="text-muted">Added {{ b.date_posted }}</small></p>
   </div>
@@ -69,10 +70,12 @@
 </div>
 {% endif %}
 {% endfor %}
+{% if request.user.is_superuser %}
 <div class="col text-center mt-5 mb-5">
     <a class="btn btn-black" href="{% url 'add_blog' %}">Add Post</a>
 </div>
-</div>   
+</div>
+{% endif %}   
 {% endblock %}
 
 {% block postloadjs %}

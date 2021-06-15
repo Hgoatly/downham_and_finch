@@ -16,6 +16,20 @@ def blog(request):
     return render(request, 'blog/blog.html', context)
 
 
+def blog_detail(request, blog_id):
+    """ A view to show individual blog entries. """
+
+    blog = get_object_or_404(Blog, pk=blog_id)
+
+    context = {
+        'blog': blog,
+    }
+    print(context)
+
+    return render(request, 'blog/blog_detail.html', context)
+
+
+
 def add_blog(request):
     if not request.user.is_superuser:
         messages.error(request, "Sorry, you're not authorised do that.")
