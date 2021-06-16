@@ -1,5 +1,4 @@
 from django.db import models
-from review.models import Review
 
 
 class Product_type(models.Model):
@@ -20,7 +19,6 @@ class Product(models.Model):
     adapted from the Boutique Ado project """
     product_type = models.ForeignKey(
         'Product_type', null=True, blank=True, on_delete=models.SET_NULL)
-    review = models.ForeignKey(Review, null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     display_name = models.CharField(max_length=254, null=True, blank=True)

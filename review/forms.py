@@ -6,7 +6,7 @@ class ReviewForm(forms.ModelForm):
     class Meta:
         model = Review
         fields = [
-            'name', 'review'
+            'product', 'name', 'review'
             ]
 
     def __init__(self, *args, **kwargs):
@@ -15,6 +15,7 @@ class ReviewForm(forms.ModelForm):
             field.widget.attrs['class'] = 'border-black'
 
     placeholders = {
+        'product': 'product',
         'name': 'name',
         'review': 'review',
     }

@@ -12,8 +12,7 @@ from .forms import ProductForm
 
 def all_products(request):
     """ A view to show all products, including sorting and
-    search queries. This view copied from the Boutique Ado project"""
-
+    search queries. This view copied and adapted from the Boutique Ado project"""
     products = Product.objects.all()
     review = Review.objects.all()
     query = None
@@ -60,6 +59,7 @@ def all_products(request):
         'search_term': query,
         'current_product_types': product_types,
         'current_sorting': current_sorting,
+        'review': review,
     }
 
     return render(request, 'products/products.html', context)

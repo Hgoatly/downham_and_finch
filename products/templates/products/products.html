@@ -75,9 +75,6 @@
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
-                                            {% if product.review %}
-                                            <p><i class="fas fa-star text-muted mr-1"></i><a href="{% url 'review' %}">Review</a></p>
-                                            {% endif %}
                                             <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
                                             {% if product.product_type %}
                                             <p class="small mt-1 mb-0">
