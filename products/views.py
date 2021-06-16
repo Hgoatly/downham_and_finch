@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Product_type
+from review.models import Review
 from .forms import ProductForm
 
 
@@ -14,6 +15,7 @@ def all_products(request):
     search queries. This view copied from the Boutique Ado project"""
 
     products = Product.objects.all()
+    review = Review.objects.all()
     query = None
     product_types = None
     sort = None
