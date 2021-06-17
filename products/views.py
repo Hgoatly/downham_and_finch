@@ -144,17 +144,3 @@ def delete_product(request, product_id):
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
 
-
-def custom_products(request):
-    """ Display custom product options """
-    products = Product.objects.filter(product_type__id=7)
-    form = CustomProductForm
-
-    context = {
-        'products': products,
-        'form': form,
-    }
-
-    return render(request, 'products/custom_products.html', context)
-
-

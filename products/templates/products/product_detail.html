@@ -98,9 +98,10 @@
                                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                                         <div class="card-body">
                                             {% for r in product.reviews.all %}
+                                            <div class="mb-4">
                                                 {{ r.name }}
                                                 {{ r.review }}
-                                                <hr>
+                                            </div>
                                             {% endfor %}
                                         </div>
                                         </div>
