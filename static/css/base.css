@@ -52,13 +52,13 @@ body {
 }
 
 .shop-now-button {
-    background: black;
+    background: #000;
     color: #D4AF37;
     min-width: 200px;
 }
 
 .btn-black {
-    background: black;
+    background: #000;
     color: #D4AF37;
     font-weight: bold;
 }
@@ -309,6 +309,24 @@ input[name='q']::placeholder {
     height: 400px;
     width: 400px;
 }
+
+/* Accordion */
+
+.card-header {
+    background-color: #000;
+}
+
+.btn-link {
+    color: #D4AF37;
+    font-weight: bold;
+}
+
+.btn-link:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Footer */
 
 #footer {
     position: static;

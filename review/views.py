@@ -4,6 +4,7 @@ from products.models import Product
 from .forms import ReviewForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django import forms
 
 
 def review(request):
@@ -19,8 +20,8 @@ def review(request):
 def add_review(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
-        product = get_object_or_404(Product, pk=product_id)
         form = ReviewForm(request.POST, request.FILES)
+        form.instance.user = request.user
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully added review!')
@@ -29,7 +30,10 @@ def add_review(request, product_id):
             messages.error(
                 request, 'Review not added. Please check your form.')
     else:
-        form = ReviewForm()
+        initial = { 'product': product }
+        form = ReviewForm(initial = initial)
+        form.fields['product'].widget = forms.HiddenInput()
+
     template = 'review/add_review.html'
     context = {
         'form': form,

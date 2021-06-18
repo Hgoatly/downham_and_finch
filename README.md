@@ -10,9 +10,9 @@
     - [Returning Visitor Goals](#returning-visitor-goals)
     - [Frequent Visitor Goals](#frequent-visitor-goals)
   - [Design](#Design)
+    - [Imagery](#imagery)
     - [Colours Used](#colours-used)
     - [Typography](#typography) 
-    - [Imagery](#imagery)
     - [Layout](#layout)
         - [Accessible to all users via the navbar](#Accessible-to-all-users-via-the-navbar)
         - [Accessible to all users via the search boxes](#Accessible-to-all-users-via-the-search-boxes)
@@ -32,7 +32,6 @@
 - [Technologies Used](#technologies-used)
   - [Languages Used](#languages-used)
   - [Frameworks, Libraries and Other Sources Used](#frameworks,-libraries-and-other-sources-used)
-  - [Application Programming Interfaces Used (APIs)](#application-programming-interfaces-used-(APIs))
 - [Information Architecture](#information-architecture)
     - [Database Choice](#database-choice)
 - [Testing](#testing)
@@ -74,6 +73,52 @@
 
 
 ## Design:
+
+### Imagery:
+
+- On the landing page, the Hero image is one of lots of small birds. They represent 'Finch' in the name of the company, as a finch is a small bird that is very 
+similar to those in the image.
+
+![Downham and Finch Hero Image](media/hero_image.jpg)
+
+- All product images were sent by the site owner, or were downloaded from [unsplash](https://www.unsplash.com/).
+
+### Colours Used:
+
+- Black (#000) was chosen as the background colour for the navbar, footer, hero image logo and call to action buttons because it contrasts well with the 
+hero image. 
+
+- Gold (#D4AF37) was used for all text and icons that are on the black background as it goes well with the hero image, as well as making a good contrast 
+with the black background.
+
+- White (#fff) was used as the backgorund, and black (#000) was used for the text on all pages other than the landing page so that the background and text do 
+not detract from the products displayed.
+
+
+### Typography:
+
+- 'Parisienne' was chosen for all logo elements and page titles as it is striking, and appropriate for a logo.
+- 'Open Sans' was chosen for all other text because it's clean and easy to read.
+
+
+### Layout: 
+
+#### Accessible to all users via the navbar:
+
+- Home
+- **About** dropdown with the following options:
+    - **About**: A short biography of the company.
+    - **Blog**: Latest news and information about the company, and its products. The site owner is able to add, edit and delete blog posts from here, 
+    but other users may only read the posts.
+    - **Faqs**: Frequently asked questions. The site owner is able to add, edit and delete blog posts from here, but other users may only read the posts.
+    Other site visitors may submit a question by clicking on the 'contact us' link. The question can then be added by the site owner, once it has been 
+    approved. This is in order to safeguard against inappropriate or offensive questions being submitted.
+    - **Reviews**: All product reviews are listed here.  
+
+
+
+
+
 
 ### Wireframes
 
