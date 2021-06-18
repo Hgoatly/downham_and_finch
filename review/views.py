@@ -7,7 +7,7 @@ from django.contrib import messages
 
 
 def review(request):
-    reviews = Review.objects.all()
+    reviews = Review.objects.all().order_by('-date_posted')
 
     context = {
         'reviews': reviews,
@@ -19,6 +19,7 @@ def review(request):
 def add_review(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
+        product = get_object_or_404(Product, pk=product_id)
         form = ReviewForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
