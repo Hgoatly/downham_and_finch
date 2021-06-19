@@ -39,7 +39,7 @@ def add_faq(request):
 
 @login_required
 def delete_faq(request, faq_id):
-    """ Delete a review from the db """
+    """ Delete a faq from the db """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, you are not authorised do that.')
         return redirect(reverse('home'))

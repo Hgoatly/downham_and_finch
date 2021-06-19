@@ -48,7 +48,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Delete Faq</h5>
+                    <h5 class="modal-title" id="FaqModalLongTitle">Delete Faq</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -63,18 +63,19 @@
             </div>
         </div>
     </div>
-</div>
+
 {% endif %}
 {% endfor %}
+<div class="col text-center mt-4 mb-4">
+    <p>
+    If you have question that has not already been answered, please <a href="{% url 'contact' %}">contact us.</a>
+    </p>
+</div>
 {% if request.user.is_superuser %}
 <div class="col text-center mt-5 mb-5">
     <a class="btn btn-black" href="{% url 'add_faq' %}">Add Faq</a>
 </div>
 {% endif %}
-<div class="col text-center mb-4">
-    <p>
-    If you have question that has not already been answered, please <a href="{% url 'contact' %}">contact us.</a>
-    </p>
 </div>
 {% endblock %}
 
