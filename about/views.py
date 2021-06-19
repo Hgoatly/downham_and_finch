@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from .models import About
+from .forms import AboutForm
 
 
 def about(request):
@@ -16,12 +18,12 @@ def about(request):
 
 
 @login_required
-def edit_about(request):
+def edit_about(request, about_id):
     """ Edit the 'about' content """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, you are not authorised do that.')
         return redirect(reverse('about'))
-    about = get_object_or_404(About)
+    about = get_object_or_404(About, pk=about_id)
     if request.method == 'POST':
         form = AboutForm(request.POST, instance=about)
         if form.is_valid():

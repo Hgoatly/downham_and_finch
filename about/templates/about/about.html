@@ -27,46 +27,11 @@
 </div>
 
 {% if request.user.is_superuser %}            
-<!-- Modal Code copied from Bootsrap -->
-<!-- Button trigger modal -->
 <p class="text-center">
     <small class="ml-2">
-<a type="button" class="text-danger" data-toggle="modal" data-target="#delete-{{ about.id }}">
-  Delete Content
-</a>
+<a href="{% url 'edit_about' about.id %}">Edit Content</a>
 </small>
 </p>
-<!-- Modal -->
-<div class="modal fade" id="delete-{{ about.id }}" tabindex="-1" role="dialog" aria-labelledby="deleteAboutModal" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="DeleteModalTitle">Delete Content</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        Would you really like to delete this content?
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-black" data-dismiss="modal">Cancel</button>
-        <a class="btn btn-danger" href="">Yes</a>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
+
 {% endif %}
-{% endblock %}
-
-{% block postloadjs %}
-    {{ block.super }}
-    <!-- JQuery for modal from https://getbootstrap.com/ -->
-        <script type="text/javascript">
-            $('#myModal').on('shown.bs.modal', function () {
-            $('#myInput').trigger('focus')
-            })
-        </script>
-
 {% endblock %}
