@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container h-100">
+        <div class="row h-100">
+            <div class="col" align="center">
+            <h1 class="display-4 logo-font" id="hero-logo"><span class="hero-logo">Server Error!</span></h1>
+            <div class="my-5">
+                <h4>
+                    <a href="{% url 'Home' %}" class="shop-now-button btn btn-sm text-uppercase py-3"><strong>Home</strong></a>
+                </h4>
+            </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
