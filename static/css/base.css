@@ -382,6 +382,18 @@ input[name='q']::placeholder {
 .blog-title {
     font-size: 2.5rem;
 }
+
+/* Error Pages */
+
+.error-body {
+    background: url(/media/empty_nest.jpg) no-repeat center center fixed;
+    background-size: cover; 
+    height: calc(100vh - 164px);
+    color: #000;
+    font-family: 'Open Sans', sans-serif; 
+    position: relative;   
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
