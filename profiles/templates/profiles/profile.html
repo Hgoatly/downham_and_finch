@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col">
                 <hr>
-                <h2 class="logo-font mb-4">My Profile</h2>
+                <h2 class="logo-font mb-4 text-center">My Profile</h2>
                 <hr>
             </div>
         </div>
@@ -30,8 +30,9 @@
                 <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <button class="btn btn-black text-uppercase float-right mb-3" type="submit">Update Information</button>
-                    <button id="add-delivery-button" class="btn btn-black text-uppercase float-left" type="button">Add Delivery Address</button>
+                    <div class="text-center">
+                    <button class="btn btn-black text-uppercase text-center mb-3" type="submit">Update Information</button>
+                    </div>
                 </form>
             </div>
 
@@ -81,5 +82,4 @@
 {% block postloadjs  %}
     {{ block.super }}
     <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
-    <script type="text/javascript" src="{% static 'profiles/js/event-listeners.js' %}"></script>
 {% endblock %}
