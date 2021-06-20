@@ -20,12 +20,13 @@
     </div>
 
 <!-- Bootstrap card. Copied from https://getbootstrap.com/ -->
+<div class="row" >
+<div class="col-12 col-md-6 offset-md-3">
 <div class="card text-center m-5">
   <div class="card-body">
     <h6>{{ about.content }}</h6>
   </div>
 </div>
-
 {% if request.user.is_superuser %}            
 <p class="text-center">
     <small class="ml-2">
@@ -33,5 +34,12 @@
 </small>
 </p>
 {% endif %}
+<div class="text-center">
+    <a href="{% url 'products' %}" class="shop-now-button btn btn-sm text-uppercase py-3"><strong>Shop Now</strong></a>
+</div>
+</div>
+</div>
+
+
 </div>
 {% endblock %}
