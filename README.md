@@ -155,6 +155,33 @@ not detract from the products displayed.
 - [GitPod](https://gitpod.io/) was used as an IDE for this project. 
 - [GitHub](https://github.com/) is where the Downham and Finch's repository is stored. Regular commits were made throughout, and code was pushed to GitHub from GitPod.
 
+## Deployment:
+
+### Heroku deployment with AWS:
+
+- The Downham and Finch website was deployed to [Heroku](https://www.heroku.com/) using the following steps:
+
+1. Install gunicorn, psycopg2-binary and dj-database-url using the ```PIP Install``` command.
+2. Freeze all the requirements for the project into a requirements.txt file using the ```pip3 freeze > requirements.txt``` command.
+3. Create a procfile, with the following inside it: ```web: gunicorn downham_and_finch.wsgi:application```.
+4. Push these changes to GitHub, using ```git add .```, ```git commit -m``` and ```git push``` commands.
+5. Navigate to [Heroku](https://www.heroku.com/), and login or create an account.
+6. Once logged in, click on 'resources'.
+7. From the add-ons search bar, add the Heroku Postgres DB, select the free account, and then submit order form to add it to the project.
+8. From the app's dashboard, click on 'settings', and then 'reveal config vars' in order to set the necessary configuration variables for the project.
+
+| Key                   | Value                      |
+|-----------------------|----------------------------|
+| AWS_ACCESS_KEY_ID     | Your AWS Access Key        |
+| AWS_SECRET_ACCESS_KEY | Your AWS Secret Access Key |
+| DATABASE_URL          | Your Database URL          |
+| EMAIL_HOST_PASS       | Your Email Password        |
+| EMAIL_HOST_USER       | Your Email Address         |
+| SECRET_KEY            | Your Secret Key            |
+| STRIPE_PUBLIC_KEY     | Your Stripe Public Key     |
+| STRIPE_SECRET_KEY     | Your Stripe Secret Key     |
+| STRIPE_WH_SECRET      | Your Stripe WH Key         |
+| USE_AWS               | TRUE                       |
 
 ## Acknowledgements:
 
