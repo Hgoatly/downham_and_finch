@@ -16,8 +16,8 @@ class TestAboutForm(TestCase):
         self.assertEqual(form.errors['content'][0], 'This field is required.')
 
     def test_image_field_is_not_required(self):
-        form = AboutForm({'title': 'Test About Title'})
-        self.assertTrue(form.is_valid)
+        form = AboutForm({'title': 'Test About Title', 'content': 'Test About Content'})
+        self.assertTrue(form.is_valid())
 
     def test_fields_are_in_form_metaclass(self):
         form = AboutForm()
