@@ -4,7 +4,7 @@ import datetime
 
 
 class Blog(models.Model):
-    title = models.CharField(max_length=254)
+    title = models.CharField(max_length=150)
     content = models.TextField(max_length=800)
     image = models.ImageField(null=True, blank=True)
     date_posted = models.DateTimeField(default=timezone.now)
