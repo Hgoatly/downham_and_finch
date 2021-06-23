@@ -300,17 +300,14 @@ input[name='q']::placeholder {
     border-color: transparent !important;
 }
 
-/*
+
 .card-img-top {
-    height: 400px;
-    width: 400px;
+    height: 20rem;
 }
 
-.card-img-bottom {
-    height: 400px;
-    width: 400px;
+#product-detail-image {
+    height: 40rem;
 }
-*/
 
 /* Accordion */
 
@@ -404,9 +401,14 @@ input[name='q']::placeholder {
         left: 0;
         z-index: 1030;
     }
-
     .header-container {
         padding-top: 164px;
+    }
+    .main-logo {
+        font-size: 35px;
+    }
+    #hero-logo {
+        margin-top: 5rem;
     }
 }
 
@@ -446,5 +448,9 @@ input[name='q']::placeholder {
 
     h2 {
         font-size: 1.5rem;
+    }
+
+    #hero-logo {
+        margin-top: 10rem;
     }
 }
