@@ -2,11 +2,11 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 {% block content %}
 <div class="overlay"></div>
@@ -20,54 +20,56 @@
     </div>
 
 
-{% for b in blogs %}
-<!-- Bootstrap card. Copied and adapted from https://getbootstrap.com/ -->
-<div class="card text-center m-md-5">
-  <div class="card-body">
-      <a href="{% url 'blog_detail' b.id %}">
-    <h5 class="card-title">{{ b.title }}</h5></a>
-    <p class="card-text">{{ b.content }}</p>
-    <p class="card-text"><small class="text-muted">Added {{ b.date_posted }}</small></p>
-  </div>
-  
-  {% if b.image %}
-  <div class="text-center">
-  <img class="card-img-bottom img-fluid" src="{{ b.image.url }}" alt="Card image cap">
-  </div>
-  {% endif %}
-</div>
+    {% for b in blogs %}
+    <!-- Bootstrap card. Copied and adapted from https://getbootstrap.com/ -->
+    <div class="card text-center m-md-5">
+        <div class="card-body">
+            <a href="{% url 'blog_detail' b.id %}">
+                <h5 class="card-title">{{ b.title }}</h5>
+            </a>
+            <p class="card-text">{{ b.content }}</p>
+            <p class="card-text"><small class="text-muted">Added {{ b.date_posted }}</small></p>
+        </div>
 
-{% if request.user.is_superuser %}            
-<!-- Modal Code copied from Bootsrap -->
-<!-- Button trigger modal -->
-<p class="text-center">
-    <small class="ml-2">
-<a type="button" class="text-danger" data-toggle="modal" data-target="#delete-{{ b.id }}">
-  Delete Post
-</a> | 
-<a href="{% url 'edit_blog' b.id %}">Edit Post</a>
-</small>
-</p>
-<!-- Modal -->
-<div class="modal fade" id="delete-{{ b.id }}" tabindex="-1" role="dialog" aria-labelledby="deleteFaqModal" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Delete Blog</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        Would you really like to delete this post?
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-black" data-dismiss="modal">Cancel</button>
-        <a class="btn btn-danger" href="{% url 'delete_blog' b.id %}">Yes</a>
-      </div>
+        {% if b.image %}
+        <div class="text-center">
+            <img class="card-img-bottom img-fluid blog_detail_image" src="{{ b.image.url }}" alt="Card image cap">
+        </div>
+        {% endif %}
     </div>
-  </div>
-</div>
+
+    {% if request.user.is_superuser %}
+    <!-- Modal Code copied from Bootsrap -->
+    <!-- Button trigger modal -->
+    <p class="text-center">
+        <small class="ml-2">
+            <a type="button" class="text-danger" data-toggle="modal" data-target="#delete-{{ b.id }}">
+                Delete Post
+            </a> |
+            <a href="{% url 'edit_blog' b.id %}">Edit Post</a>
+        </small>
+    </p>
+    <!-- Modal -->
+    <div class="modal fade" id="delete-{{ b.id }}" tabindex="-1" role="dialog" aria-labelledby="deleteFaqModal"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Delete Blog</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Would you really like to delete this post?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-black" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-danger" href="{% url 'delete_blog' b.id %}">Yes</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endif %}
 {% endfor %}
@@ -76,16 +78,52 @@
     <a class="btn btn-black" href="{% url 'add_blog' %}">Add Post</a>
 </div>
 </div>
-{% endif %}   
+{% endif %}
+
+<!-- Pagination. Copied and adapted from https://www.ordinarycoders.com/blog/article/django-pagination -->
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        {% if blogs.has_previous %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ blogs.previous_page_number }}">Previous</a>
+        </li>
+        {% else %}
+        <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+        </li>
+        {% endif %}
+        {% for i in blogs.paginator.page_range %}
+        {% if blogs.number == i %}
+        <li class="page-item active" aria-current="page">
+            <span class="page-link">
+                {{ i }}
+                <span class="sr-only">(current)</span>
+            </span>
+        </li>
+        {% else %}
+        <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+        {% endif %}
+        {% endfor %}
+        {% if blogs.has_next %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ blogs.next_page_number }}">Next</a>
+        </li>
+        {% else %}
+        <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Next</a>
+        </li>
+        {% endif %}
+    </ul>
+</nav>
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
-    <!-- JQuery for modal from https://getbootstrap.com/ -->
-        <script type="text/javascript">
-            $('#myModal').on('shown.bs.modal', function () {
-            $('#myInput').trigger('focus')
-            })
-        </script>
+{{ block.super }}
+<!-- JQuery for modal from https://getbootstrap.com/ -->
+<script type="text/javascript">
+    $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+    })
+</script>
 {% endblock %}
-

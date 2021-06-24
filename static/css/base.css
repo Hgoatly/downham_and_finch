@@ -300,13 +300,21 @@ input[name='q']::placeholder {
     border-color: transparent !important;
 }
 
-
 .card-img-top {
     height: 20rem;
 }
 
-#product-detail-image {
-    height: 40rem;
+.card-img-bottom {
+    max-height: 70vw;
+    max-width: 60vh;
+    object-fit: cover;
+}
+
+.product_detail_image, 
+.blog_detail_image {
+    max-height: 40vw;
+    max-width: 40vh;
+    object-fit: cover;
 }
 
 /* Accordion */
@@ -323,12 +331,6 @@ input[name='q']::placeholder {
 .btn-link:hover {
     text-decoration: none;
     color: #fff;
-}
-
-.product_detail_image {
-    max-height: 40vw;
-    max-width: 40vh;
-    object-fit: cover;
 }
 
 /* Pagination */
@@ -439,7 +441,7 @@ input[name='q']::placeholder {
         font-weight: bold;
     }
     .nav-link {
-        padding: 0.15rem;
+        padding: 0.1rem;
     }
     .nav-link i.fa-lg {
         font-size: 1rem;
@@ -452,7 +454,7 @@ input[name='q']::placeholder {
         font-size: .9rem;
     }
     #hero-logo {
-        margin-top: 15rem;
+        margin-top: 10rem;
     }
     .main-logo {
         font-size: 35px;

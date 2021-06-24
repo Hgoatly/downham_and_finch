@@ -3,15 +3,19 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .models import Blog
 from .forms import BlogForm
+from django.core.paginator import Paginator
 
 
 def blog(request):
     """ A view to render blog posts """
 
     blogs = Blog.objects.all().order_by('-date_posted')
+    paginator = Paginator(blogs, 3)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
 
     context = {
-        'blogs': blogs,
+        'blogs': page_obj,
     }
     return render(request, 'blog/blog.html', context)
 
