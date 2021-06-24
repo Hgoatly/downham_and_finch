@@ -10,8 +10,8 @@ class TestContactViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/products.html')
 
-    def test_product_detail_page(self):
-        product = Product.objects.create(name='Test Product')
-        response = self.client.get(f'/product/{product.id}')
+    def test_product_detail_page(self, product_id=1):
+        
+        response = self.client.get(f'/product/1')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/product_detail.html')

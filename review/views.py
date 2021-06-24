@@ -5,13 +5,17 @@ from .forms import ReviewForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django import forms
+from django.core.paginator import Paginator
 
 
 def review(request):
     reviews = Review.objects.all().order_by('-date_posted')
+    paginator = Paginator(reviews, 3)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
 
     context = {
-        'reviews': reviews,
+        'reviews': page_obj,
     }
     return render(request, 'review/review.html', context)
 

@@ -26,3 +26,4 @@ class Product_typeModelTest(TestCase):
         product_type = Product_type.objects.get(id=1)
         max_length = product_type._meta.get_field('display_name').max_length
         self.assertEqual(max_length, 254)
+

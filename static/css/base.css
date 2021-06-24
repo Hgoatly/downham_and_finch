@@ -325,6 +325,16 @@ input[name='q']::placeholder {
     color: #fff;
 }
 
+/* Pagination */
+
+.page-link {
+    color: #000;
+}
+
+.page-link:active {
+    background: #000;
+}
+
 /* Footer */
 
 #footer {
