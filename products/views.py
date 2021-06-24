@@ -20,9 +20,6 @@ def all_products(request):
     product_types = None
     sort = None
     direction = None
-    paginator = Paginator(products, 8)
-    page_number = request.GET.get('page')
-    page_obj = paginator.get_page(page_number)
 
     if request.GET:
         if 'sort' in request.GET:
@@ -59,7 +56,7 @@ def all_products(request):
     current_sorting = f'{sort}_{direction}'
 
     context = {
-        'products': page_obj,
+        'products': products,
         'search_term': query,
         'current_product_types': product_types,
         'current_sorting': current_sorting,
