@@ -325,6 +325,12 @@ input[name='q']::placeholder {
     color: #fff;
 }
 
+.product_detail_image {
+    max-height: 40vw;
+    max-width: 40vh;
+    object-fit: cover;
+}
+
 /* Pagination */
 
 .page-link {

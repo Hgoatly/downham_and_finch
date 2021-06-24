@@ -3,13 +3,17 @@ from .models import Faq
 from .forms import FaqForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.core.paginator import Paginator
 
 
 def faq(request):
     faqs = Faq.objects.all()
+    paginator = Paginator(faqs, 3)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
 
     context = {
-        'faqs': faqs,
+        'faqs': page_obj,
     }
     return render(request, 'faq/faq.html', context)
 
