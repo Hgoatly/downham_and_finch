@@ -331,10 +331,6 @@ input[name='q']::placeholder {
     color: #000;
 }
 
-.page-link:active {
-    background: #000;
-}
-
 /* Footer */
 
 #footer {
@@ -399,6 +395,9 @@ input[name='q']::placeholder {
   .container {
     max-width: 80%;
   }
+  .main-logo {
+        font-size: 50px;
+    }
 }
 
 /* Copied from Boutique Ado project. */
@@ -414,11 +413,11 @@ input[name='q']::placeholder {
     .header-container {
         padding-top: 164px;
     }
-    .main-logo {
-        font-size: 35px;
-    }
     #hero-logo {
         margin-top: 5rem;
+    }
+    .main-logo {
+        font-size: 40px;
     }
 }
 
@@ -448,6 +447,9 @@ input[name='q']::placeholder {
     }
     #hero-logo {
         margin-top: 15rem;
+    }
+    .main-logo {
+        font-size: 35px;
     }
 }
 

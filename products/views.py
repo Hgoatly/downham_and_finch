@@ -8,16 +8,21 @@ from django.db.models.functions import Lower
 from .models import Product, Product_type
 from review.models import Review
 from .forms import ProductForm
+from django.core.paginator import Paginator
 
 
 def all_products(request):
     """ A view to show all products, including sorting and
     search queries. This view copied and adapted from the Boutique Ado project"""
+
     products = Product.objects.all()
     query = None
     product_types = None
     sort = None
     direction = None
+    paginator = Paginator(products, 8)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
 
     if request.GET:
         if 'sort' in request.GET:
@@ -54,7 +59,7 @@ def all_products(request):
     current_sorting = f'{sort}_{direction}'
 
     context = {
-        'products': products,
+        'products': page_obj,
         'search_term': query,
         'current_product_types': product_types,
         'current_sorting': current_sorting,
