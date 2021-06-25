@@ -24,10 +24,9 @@
     <!-- Bootstrap card. Copied and adapted from https://getbootstrap.com/ -->
     <div class="card text-center m-md-5">
         <div class="card-body">
-            <a href="{% url 'blog_detail' b.id %}">
-                <h5 class="card-title">{{ b.title }}</h5>
+            <a href="{% url 'blog_detail' b.id %}" class="blog-link">
+                <h5 class="card-title blog-title">{{ b.title }}</h5>
             </a>
-            <p class="card-text">{{ b.content }}</p>
             <p class="card-text"><small class="text-muted">Added {{ b.date_posted }}</small></p>
         </div>
 

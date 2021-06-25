@@ -311,6 +311,17 @@ input[name='q']::placeholder {
     object-fit: cover;
 }
 
+.blog-title {
+    color: #000;
+}
+
+.blog-title:hover {
+    color: #D4AF37;
+}
+.blog-link:hover {
+    text-decoration: none;
+}
+
 .product_detail_image, 
 .blog_detail_image {
     max-height: 40vw;
