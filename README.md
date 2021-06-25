@@ -70,8 +70,6 @@
 11. I would like to be able to pay for my purchases securely using PayPal.
 
 
-
-
 ## Design:
 
 ### Imagery:
@@ -105,7 +103,7 @@ not detract from the products displayed.
 
 #### Accessible to all users via the navbar:
 
-- Home
+- All Pages:
 - **About** dropdown with the following options:
     - **About**: A short biography of the company.
     - **Blog**: Latest news and information about the company, and its products. The site owner is able to add, edit and delete blog posts from here, 
@@ -114,6 +112,30 @@ not detract from the products displayed.
     Other site visitors may submit a question by clicking on the 'contact us' link. The question can then be added by the site owner, once it has been 
     approved. This is in order to safeguard against inappropriate or offensive questions being submitted.
     - **Reviews**: All product reviews are listed here.  
+    - **Contact**: Contact the business owner via a contact form.
+- **My Account**: 
+    - **Login**: Login for existing users.
+    - **Register**: Register as a user.
+- **Shopping Basket**:
+    - **Shopping Basket Icon**: Click here to navigate to the shopping basket page.
+- **Search**: Search the site using key words.
+- **All Products** dropdown with the following options:
+    - **By Price**: Display items by price.
+    - **By Product Type**: Display items by Product Type.
+    - **All Products**: Display all products.
+- **Face Masks** dropdown with the following product options:
+    - **3D Masks**
+    - **Simple Masks**
+    -**All Face Masks**
+- **Pet Products** dropdown with the following options:
+    - **Pet Bandanas**
+    - **Pet Bow Ties**
+    - **All Pet Products**
+- **Bags** dropdown with the following options:
+    - **Lavender Bags**
+    - **Drawstring Bags**
+
+
 
 
 
