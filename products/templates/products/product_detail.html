@@ -86,9 +86,9 @@
                             <small class="ml-2">
                                 <a type="button" class="text-danger" data-toggle="modal"
                                     data-target="#delete-{{ product.id }}">
-                                    Delete Product
+                                    Delete
                                 </a> |
-                                <a href="{% url 'edit_product' product.id %}">Product</a>
+                                <a href="{% url 'edit_product' product.id %}">Edit</a>
                             </small>
                         </p>
                         <!-- Modal -->
@@ -103,7 +103,7 @@
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        Would you really like to delete this Product?
+                                        Would you really like to delete {{ product.display_name }}?
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-black" data-dismiss="modal">Cancel</button>
