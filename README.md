@@ -31,6 +31,7 @@
     - [Mobile Design Features](#mobile-design-features)
     - [Tablet Design Features](#tablet-design-features)
     - [Desktop Design Features](#desktop-design-features)
+    - [Interactive Features](#Interactive-Features)
     - [Future Features](#future-features)
 - [Technologies Used](#technologies-used)
   - [Languages Used](#languages-used)
@@ -95,12 +96,13 @@ with the black background.
 - White (#fff) was used as the backgorund, and black (#000) was used for the text on all pages other than the landing page so that the background and text do 
 not detract from the products displayed.
 
+- Turquoise (#17a2b8) was chosen as the colour for the basket when there are items in it, as it makes a good contrast with the other colours on the site.
+
 
 ### Typography:
 
 - 'Parisienne' was chosen for all logo elements and page titles as it is striking, and appropriate for a logo.
 - 'Open Sans' was chosen for all other text because it's clean and easy to read.
-
 
 ### Layout: 
 
@@ -208,7 +210,7 @@ not detract from the products displayed.
 -**500 Error Page**: A custom 505 error page was designed to redirect users back to the site in the event of a 500 error.
 
 
-### Wireframes
+### Wireframes:
 
 - The Downham and Finch sitemap can be found <a href="static/wireframes/downham-and-finch-sitemap.pdf" target="_blank">here.</a>
 
@@ -217,6 +219,62 @@ not detract from the products displayed.
 - Original tablet wireframes from 04/04/21 can be found <a href="static/wireframes/downham-and-finch-tablet-wireframes.pdf" target="_blank">here.</a>
 
 - Original mobile wireframes from 04/04/21 can be found <a href="static/wireframes/downham-and-finch-mobile-wireframes.pdf" target="_blank">here.</a>
+
+
+### Features:
+
+#### Mobile Design Features:
+
+The Downham and Finch website follows the principles of mobile-first, responsive design. With this in mind, the following features on the mobile site differ 
+from those on larger screens.
+
+- The navbar has been collapsed, and is accessed by clicking on the 'hamburger' icon in the top left hand corner of the screen. When the 'hamburger'
+icon is clicked, the 'All Products', 'Face Masks', 'Pet Products' and 'bags' links are displayed, as well as a 'home' link.
+
+- The Search box has been replaced by an icon, which displays a search box when clicked.
+
+- The 'Search', 'About', 'My Account' and 'Basket' icons have had their padding reduced, so that they fit on one line.
+
+- The product images on the products page are displayed one per row, in order to make best use of space, and to be visually appealing.
+
+#### Tablet Design Features:
+
+The tablet design has most of the same features as the mobile site, except those detailed below:
+
+- The products are displayed two products per row, rather than 4 on the desktop site, and 1 on the mobile site.
+
+#### Desktop Design Features:
+
+The desktop design has some of the same features as the obile and tablet versions. The differences are detailed below:
+
+- The fixed navbar is not collapsed, and spans the width of the page.
+
+- Products on the products page are displayed with 4 products per row.
+
+#### Interactive Features:
+
+The Downham and Finch website has been built around the principles of CRUD (Create, Read, Update, Delete), and all of these actionscan be taken on 
+the site:
+
+- **Register**: The site visitor can add their details to open an account on the site.
+- **Login**: The site visitor can login to the site if they are an existing user.
+- **Contact**: Any User can contact the site owner by email.
+- **Sort**: Any user can sort the products by price, name or category.
+- **Search**: Any user can search the site using keywords.
+- **Checkout**: Any user can make a secure purchase using Stripe.
+- **Add Product**: The superusers(Admin) can add products to the database.
+- **Edit Product**: The superuser(Admin) can edit products that are already in the database.
+- **Delete Product**: The superuser(Admin) can delete products that are already in the database.
+- **Edit Content**: The superuser(Admin) can edit the content on the 'About' page.
+- **Add Blog**: The superuser(Admin) can add a post to the 'Blog page'.
+- **Edit Blog**: The superuser(Admin) can edit a blog post.
+- **Delete Blog**: The superuser(Admin) can delete a blog post.
+- **Add Faq**: The superuser(Admin) can add a Faq.
+- **Edit Faq**: The superuser(Admin) can edit a Faq.
+- **Delete Faq**: The superuser(Admin) can delete a Faq.
+- **Add Review**: A logged in and registered user can add a review.
+- **Delete Review**: The superuser(Admin) can delete a review.
+
 
 
 ## Technologies used:
