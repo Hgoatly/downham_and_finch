@@ -15,14 +15,17 @@
     - [Typography](#typography) 
     - [Layout](#layout)
         - [Accessible to all users via the navbar](#Accessible-to-all-users-via-the-navbar)
-        - [Accessible to all users via the search boxes](#Accessible-to-all-users-via-the-search-boxes)
-        - [Accessible to registered users via the navbar](#Accessible-to-registered-users-via-the-navbar)
-        - [Accessible to registered users via the My Profile page](#Accessible-to-registered-users-via-the-My-Profile-page)
-        - [Accessible to registered users via the Manage Account page](#Accessible-to-registered-users-via-the-Manage-Account-page)
-        - [Accessible only to the site owner (admin user)](#Accessible-only-to-the-site-owner-(admin-user))
+        - [Accessible to logged in regisered users via the Navbar](#Accessible-to-logged-in-regisered-users-via-the-Navbar)
+        - [Accessible only to Superusers(Admin) via the navbar](#Accessible-only-to-Superusers(Admin)-via-the-navbar)
+        - [Accessible to all users via the Footer](#Accessible-to-all-users-via-the-Footer)
+        - [Accessible to all users on the Products page](#Accessible-to-all-users-on-the-Products-page)
+        - [Accessible to Superusers(Admin) on the Products page](#Accessible-to-Superusers(Admin)-on-the-Products-page)
+        - [Accessible to Superusers(Admin) on the Product Detail page](#Accessible-to-Superusers(Admin)-on-the-Product-Detail-page)
+        - [Accessible to Superusers(Admin) on the About page](#Accessible-to-Superusers(Admin)-on-the-About-page)
+        - [Accessible to Superusers(Admin) on the Blog page](#Accessible-to-Superusers(Admin)-on-the-Blog-page)
+        - [Accessible to Superusers(Admin) on the Faqs page](#Accessible-to-Superusers(Admin)-on-the-Faqs-page)
+        - [Accessible to Superusers(Admin) on the Reviews page](#Accessible-to-Superusers(Admin)-on-the-Reviews-page)
         - [Error Pages](#Error-Pages)
-        - [Additional features available to logged in users](#Additional-features-available-to-logged-in-users)
-        - [Additional features available to any user who is not logged in](#Additional-features-available-to-any-user-who-is-not-logged-in)
     - [Wireframes](#wireframes)
   - [Features](#features)
     - [Mobile Design Features](#mobile-design-features)
@@ -181,7 +184,28 @@ not detract from the products displayed.
 
 #### Accessible to Superusers(Admin) on the About page:
 
+-**Edit Content**: Allows a superuser to edit the About page.
 
+#### Accessible to Superusers(Admin) on the Blog page:
+
+-**Edit Post**: Allows a superuser to edit a blog.
+-**Delete Post**: Allows a superuser to delete a blog.
+
+#### Accessible to Superusers(Admin) on the Faqs page:
+
+-**Edit Faq**: Allows a superuser to edit a faq.
+-**Delete Faq**: Allows a superuser to delete a Faq.
+
+#### Accessible to Superusers(Admin) on the Reviews page:
+
+-**Edit Review**: Allows a superuser to edit a faq.
+-**Delete Review**: Allows a superuser to delete a Faq.
+
+### Error Pages:
+
+-**404 Error Page**: A custom 404 error page was designed to redirect users back to the site in the event of a 404 error.
+
+-**500 Error Page**: A custom 505 error page was designed to redirect users back to the site in the event of a 500 error.
 
 
 
