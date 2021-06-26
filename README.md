@@ -275,7 +275,14 @@ the site:
 - **Add Review**: A logged in and registered user can add a review.
 - **Delete Review**: The superuser(Admin) can delete a review.
 
+#### Future Features:
 
+In future I would like to add the following features:
+
+- **Verified Purchases**: I would like to allow only customers who have bought an item to be able to leave a review for it. 
+- **Custom Products**: I would like to be able to allow customers to be able to choose the fabric for their product from a selection on the site.
+- **Wishlist**: I would like users to be able to create a wishlist.
+- **Delivery Address**: I would like users to be able to specify different billing and delivery addresses.
 
 ## Technologies used:
 
@@ -449,12 +456,24 @@ Make migrations and then migrate in order to create a database, by running the f
 Load the fixtures from the 'product_types.json' file and then from the 'products.json' file - which are contained in the 'fixtures' folder into the database. 
 This is done by using the following command:
 ```
-python3 manage.py loaddata <file name> 
+    python3 manage.py loaddata <file name> 
+```
 
 Create a superuser with the following command: ```python3 manage.py runserver``` and entering your credentials.
 
 Run the app by entering the following command:
 ```python3 manage.py runserver```
+
+## Credits:
+
+### Code:
+
+- **Code Institute Boutique Ado Project**: Much of this project was copied and adapted from the Code Institute 'Boutique Ado' project. Comments stating this have been added to the top
+of files that have been copied and adapted in this way, as well as to views, as it was felt that by commenting on every piece of copied code 
+would mean that the comments would detract from the code. If there is additional code that has been copied from Boutique Ado and NOT acknowledged in 
+the corresponding file, then it is in error, and should have been acknowledged. 
+- **Code Institute Slack Channels**: Slack was used extensively for debugging, and to bounce ideas off other students and CI staff members.
+-**W3 Schools**: W3 Schools was referenced for debugging purposes.
 
 
 ## Acknowledgements:
