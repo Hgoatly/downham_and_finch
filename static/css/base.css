@@ -410,6 +410,7 @@ input[name='q']::placeholder {
 
 /* -------------------------------- Media Queries */
 
+/* Copied from Boutique Ado project. */
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
   .container {
@@ -433,8 +434,9 @@ input[name='q']::placeholder {
     .header-container {
         padding-top: 164px;
     }
+
     #hero-logo {
-        margin-top: 15rem;
+        margin-top: 5rem;
     }
     .main-logo {
         font-size: 40px;

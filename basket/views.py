@@ -51,24 +51,6 @@ def add_to_basket(request, item_id):
     return redirect(redirect_url)
 
 
-def add_custom_to_basket(request, fabric_id):
-    fabric = get_object_or_404(FabricChoice, pk=fabric_id)
-    basket = request.session.get('basket', {})
-    quantity = int(request.POST.get('quantity') or 1)
-    redirect_url = request.POST.get('redirect_url')
-
-    if fabric_id in list(basket.keys()):
-        basket[fabric_id] += quantity
-        messages.success(
-            request, f'Updated {fabric.display_name} quantity to {basket[fabric_id]}')
-    else:
-        basket[fabric_id] = quantity
-        messages.success(
-            request, f'Added {fabric.display_name} to your basket')
-    request.session['basket'] = basket
-    return redirect(redirect_url)
-
-
 def adjust_basket(request, item_id):
     """Adjust the quantity of the specified product to the specified amount"""
 

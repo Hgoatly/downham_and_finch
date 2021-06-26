@@ -124,16 +124,69 @@ not detract from the products displayed.
     - **By Product Type**: Display items by Product Type.
     - **All Products**: Display all products.
 - **Face Masks** dropdown with the following product options:
-    - **3D Masks**
-    - **Simple Masks**
-    -**All Face Masks**
+    - **3D Masks**: Show a selection of 3D face masks.
+    - **Simple Masks**: Show a selection of Simple Maks.
+    -**All Face Masks**: Show all Face Masks
 - **Pet Products** dropdown with the following options:
-    - **Pet Bandanas**
-    - **Pet Bow Ties**
-    - **All Pet Products**
+    - **Pet Bandanas**: Show all pet bandanas.
+    - **Pet Bow Ties**: Show all pet bow ties.
+    - **All Pet Products**: Show all pet products.
 - **Bags** dropdown with the following options:
-    - **Lavender Bags**
-    - **Drawstring Bags**
+    - **Lavender Bags**: Show all lavender bags.
+    - **Drawstring Bags**: Show all drawstring bags.
+
+#### Accessible to logged in regisered users via the Navbar:
+
+-**My Account**:
+    -**My Profile**: Navigate to the session user's profile page.
+    -**Logout**: Log out of the site.
+
+#### Accessible only to Superusers(Admin) via the navbar:
+
+-**Product Management**: Add products to the site.
+
+#### Accessible to all users via the Footer:
+
+- **Social Media** links to the following social media sites:
+    - **Facebook**
+    - **Twitter**
+    - **Instagram**
+- **Products**: Links to available products.
+    -**Face Masks**: Show all Face Masks.
+    - **Pet Products**: Show all Pet Products.    
+    - **Lavender Bags**: Show all lavender bags.
+    - **Drawstring Bags**: Show all drawstring bags.
+-**Useful Links**:
+    -**About**: Navigates to the About page.
+    -**Faqs**: Navigates to the Faqs page.
+    -**Reviews**: Navigates to the Reviews page.
+    -**Contact**: Navigates to the Contact page.
+-**Contact**:
+    -**Email Us**: Navigates to the Contact page.
+    -**Phone Number**: Allows the user to call the business by clicking on the number.
+
+#### Accessible to all users on the Products page:
+
+-**Sort Box**: Allows the user to sort the items by price, rating, name and category.
+
+#### Accessible to Superusers(Admin) on the Products page:
+
+-**Edit**: Allows a superuser to edit a product.
+-**Delete**: ALlows a superuser to delete a product.
+
+#### Accessible to Superusers(Admin) on the Product Detail page:
+
+-**Edit**: Allows a superuser to edit a product.
+-**Delete**: Allows a superuser to delete a product.
+
+#### Accessible to Superusers(Admin) on the About page:
+
+
+
+
+
+
+
 
 
 
