@@ -253,7 +253,7 @@ The desktop design has some of the same features as the obile and tablet version
 
 #### Interactive Features:
 
-The Downham and Finch website has been built around the principles of CRUD (Create, Read, Update, Delete), and all of these actionscan be taken on 
+The Downham and Finch website has been built around the principles of CRUD (Create, Read, Update, Delete), and all of these actions can be taken on 
 the site:
 
 - **Register**: The site visitor can add their details to open an account on the site.
