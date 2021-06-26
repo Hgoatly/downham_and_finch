@@ -41,8 +41,8 @@
   - [Known Bugs and Fixes](#known-bugs-and-fixes)
   - [Defensive Programming](#defensive-programming)
 - [Deployment](#deployment)
-  - [Github Pages](#github-pages)
-  - [Forking The Repository](#forking-the-repository)
+  - [Heroku Deployment with AWS](#github-pages)
+  - [Amazon Web Services](#forking-the-repository)
   - [Making A Local Clone](#making-a-local-clone)
 - [Credits](#credits)
 - [Version Control](#version-control)
@@ -375,7 +375,7 @@ if 'USE_AWS' in os.environ:
 6. Delete DISABLE_COLLECTSTATIC from the Heroku Config Variables.
 7. Finally, push to GitHub, and all changes should be automatically pushed to Heroku too.
 
-### Local Deployment:
+### Making a Local Clone:
 In order to make a local clone of the Downham and Finch website, enter ```git clone https://github.com/Hgoatly/downham_and_finch.git``` into the
 terminal. 
 
