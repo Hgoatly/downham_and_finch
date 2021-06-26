@@ -208,17 +208,6 @@ not detract from the products displayed.
 -**500 Error Page**: A custom 505 error page was designed to redirect users back to the site in the event of a 500 error.
 
 
-
-
-
-
-
-
-
-
-
-
-
 ### Wireframes
 
 - The Downham and Finch sitemap can be found <a href="static/wireframes/downham-and-finch-sitemap.pdf" target="_blank">here.</a>
