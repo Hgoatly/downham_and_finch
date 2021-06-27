@@ -1,3 +1,4 @@
+<ul>
 <li class="list-inline-item">
     <a class="nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true"
         aria-expanded="false">
@@ -23,14 +24,14 @@
     </div>
 </li>
 <li class="list-inline-item dropdown">
-    <a class="nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+    <a class="nav-link d-block d-lg-none" href="#" id="user-options-mob" data-toggle="dropdown" aria-haspopup="true"
         aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-user fa-lg"></i></div>
             <p class="my-0">My Account</p>
         </div>
     </a>
-    <div class="dropdown-menu border-0" aria-labelledby="user-options">
+    <div class="dropdown-menu border-0" aria-labelledby="user-options-mob">
         {% if request.user.is_authenticated %}
         {% if request.user.is_superuser %}
         <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
@@ -44,13 +45,13 @@
     </div>
 </li>
 <li class="list-inline-item dropdown d-lg-none">
-    <a class="nav-link" href="#" id="about" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <a class="nav-link" href="#" id="about-mob" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-book fa-lg"></i></div>
             <p class="my-0">About</p>
         </div>
     </a>
-    <div class="dropdown-menu border-0" aria-labelledby="about">
+    <div class="dropdown-menu border-0" aria-labelledby="about-mob">
         <a href="{% url 'about' %}" class="dropdown-item">About</a>
         <a href="{% url 'blog' %}" class="dropdown-item">Blog</a>
         <a href="{% url 'faq' %}" class="dropdown-item">Faqs</a>
@@ -73,3 +74,4 @@
         </div>
     </a>
 </li>
+</ul>
