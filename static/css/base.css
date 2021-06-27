@@ -47,8 +47,10 @@ body {
     width: fit-content;
 }
 
+/* End of copied code */
+
 #hero-logo {
-    margin-top: 15%;
+    margin-top: 17%;
 }
 
 .shop-now-button {
@@ -62,6 +64,8 @@ body {
     color: #D4AF37;
     font-weight: bold;
 }
+
+/* This section copied from the Boutique Ado project */
 
 .btn-outline-black {
     background: #fff;
@@ -431,6 +435,12 @@ input[name='q']::placeholder {
     }
 }
 
+@media (max-width: 1280px) {
+  #hero-logo {
+        margin-top: 5rem;
+    }
+}
+
 /* Copied from Boutique Ado project. */
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
@@ -445,9 +455,6 @@ input[name='q']::placeholder {
         padding-top: 164px;
     }
 
-    #hero-logo {
-        margin-top: 5rem;
-    }
     .main-logo {
         font-size: 40px;
     }
