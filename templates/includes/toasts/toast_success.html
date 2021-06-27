@@ -21,7 +21,7 @@
             <div class="basket-notification-wrapper">
             {% for item in basket_items %}
                 <div class="row">
-                    {% if product.image %}
+                    {% if item.product.image %}
                     <div class="col-3 my-1">
                         <img class="w-100" src="{{ item.product.image.url }}">
                     </div>
