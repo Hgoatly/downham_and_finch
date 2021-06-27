@@ -336,6 +336,11 @@ input[name='q']::placeholder {
 .edit-form-image {
     object-fit: cover;
 }
+
+.product-image {
+        zoom: 87%;
+    }
+
 /* Accordion */
 
 .card-header {
@@ -506,6 +511,10 @@ input[name='q']::placeholder {
 
     #hero-logo {
         margin-top: 10rem;
+    }
+
+    .product-image {
+        zoom: 100%;
     }
 }
 
