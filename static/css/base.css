@@ -305,7 +305,7 @@ input[name='q']::placeholder {
 }
 
 .card-img-top {
-    height: 20rem;
+    height: 30rem;
     object-fit: cover;
 }
 
@@ -333,6 +333,9 @@ input[name='q']::placeholder {
     object-fit: cover;
 }
 
+.edit-form-image {
+    object-fit: cover;
+}
 /* Accordion */
 
 .card-header {
