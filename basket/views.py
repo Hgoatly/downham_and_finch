@@ -75,8 +75,6 @@ def adjust_basket(request, item_id):
     else:
         if quantity > 0:
             basket[item_id] = quantity
-            messages.success(
-                request, f'Updated {product.display_name} quantity to {basket[fabric_id]}')
         else:
             basket.pop(item_id)
             messages.success(
