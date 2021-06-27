@@ -472,7 +472,9 @@ Run the app by entering the following command:
 of files that have been copied and adapted in this way, as well as to views, as it was felt that by commenting on every piece of copied code 
 would mean that the comments would detract from the code. If there is additional code that has been copied from Boutique Ado and NOT acknowledged in 
 the corresponding file, then it is in error, and should have been acknowledged. 
+- **Footer Element**: The footer element was copied and adapted from https://mdbootstrap.com/docs/standard/navigation/footer/.
 - **Code Institute Slack Channels**: Slack was used extensively for debugging, and to bounce ideas off other students and CI staff members.
+
 -**W3 Schools**: W3 Schools was referenced for debugging purposes.
 
 
