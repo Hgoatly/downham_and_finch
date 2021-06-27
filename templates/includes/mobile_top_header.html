@@ -4,7 +4,7 @@
         aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-search fa-lg"></i></div>
-            <p class="my-0">Search</p>
+            <p class="my-0  d-none d-sm-block">Search</p>
         </div>
     </a>
     <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
@@ -28,7 +28,7 @@
         aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-user fa-lg"></i></div>
-            <p class="my-0">My Account</p>
+            <p class="my-0  d-none d-sm-block">My Account</p>
         </div>
     </a>
     <div class="dropdown-menu border-0" aria-labelledby="user-options-mob">
@@ -48,7 +48,7 @@
     <a class="nav-link" href="#" id="about-mob" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-book fa-lg"></i></div>
-            <p class="my-0">About</p>
+            <p class="my-0  d-none d-sm-block">About</p>
         </div>
     </a>
     <div class="dropdown-menu border-0" aria-labelledby="about-mob">
@@ -64,7 +64,7 @@
         href="{% url 'view_basket' %}">
         <div class="text-center">
             <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-            <p class="my-0">
+            <p class="my-0  d-none d-sm-block">
                 {% if grand_total %}
                 £{{ grand_total|floatformat:2 }}
                 {% else %}

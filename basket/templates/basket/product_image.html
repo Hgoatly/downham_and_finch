@@ -1,0 +1,7 @@
+<!--This file has been copied from the Boutique Ado project-->
+
+{% if item.product.image %}
+<img class="card-img-top img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+{% else %}
+<img class="card-img-top img-fluid rounded" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ item.product.name }}">
+{% endif %}

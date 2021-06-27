@@ -345,6 +345,10 @@ input[name='q']::placeholder {
     color: #fff;
 }
 
+.btn-sm {
+    font-size: 0.7rem;
+}
+
 /* Pagination */
 
 .page-link {
@@ -486,5 +490,32 @@ input[name='q']::placeholder {
 
     #hero-logo {
         margin-top: 10rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .header-container {
+        padding-top: 50px;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    #hero-logo {
+        margin-top: 20rem;
+        font-size: 1.5rem
+    }
+
+    .shop-now-button {
+        font-size: 0.75rem;
+    }
+
+    .nav-link {
+        padding: 0.2rem;
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 1rem;
     }
 }
