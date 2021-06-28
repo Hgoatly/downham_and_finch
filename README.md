@@ -1,7 +1,10 @@
-# Downham and Finch
+<div align="center">
+# **Downham and Finch**
+![Downham and Finch responsive image display](static/readme-images/hero_photo.jpg)
 - An e commerce site selling custom face masks, pet bandanas and pet bow ties.
-
+Visit [Downham and Finch](https://downham-and-finch.herokuapp.com/)
 ## **Table of Contents:**
+</div>
 
 - [Site Owner Goals](#site-owner-goals)
 - [User Experience (UX)](#user-experience-ux)
@@ -38,6 +41,7 @@
   - [Frameworks, Libraries and Other Sources Used](#frameworks,-libraries-and-other-sources-used)
 - [Information Architecture](#information-architecture)
     - [Database Choice](#database-choice)
+    - [Data Modeling](#Data-Modeling)
 - [Testing](#testing)
   - [Known Bugs and Fixes](#known-bugs-and-fixes)
   - [Defensive Programming](#defensive-programming)
@@ -300,6 +304,8 @@ In future I would like to add the following features:
 - **Custom Products**: I would like to be able to allow customers to be able to choose the fabric for their product from a selection on the site.
 - **Wishlist**: I would like users to be able to create a wishlist.
 - **Delivery Address**: I would like users to be able to specify different billing and delivery addresses.
+- **Paypal**: I would like users to be able to pay for their items using Paypal.
+- **Apple Pay**: I would like users to be able to pay for their items using Apple Pay.
 
 ## Technologies used:
 
@@ -324,6 +330,41 @@ In future I would like to add the following features:
 - [JQuery](https://jquery.com/) was used extensively throughout the site, in order to provide functionality for Bootstrap elements, and for Stripe. 
 - [GitPod](https://gitpod.io/) was used as an IDE for this project. 
 - [GitHub](https://github.com/) is where the Downham and Finch's repository is stored. Regular commits were made throughout, and code was pushed to GitHub from GitPod.
+- [Font Awesome](https://fontawesome.com/) was used for icons on the site.
+
+## Information Architechture:
+
+### Database Choice:
+
+- SQLight was used in development, as it comes pre-installed with Django.
+- PostgreSQL was used for the deployed site, as it is offered as an optional add-on by Heroku.
+
+### Data Modeling:
+
+- The image below was produced using the [Draw SQL app](#https://drawsql.app/)
+
+![Data Model](static/readme-images/database_diagram.jpg)
+
+## Testing:
+
+Information about tests carried out can be found in a separate [testing.md](testing.md) file.
+
+### Known Bugs and Fixes:
+
+- On the edit product form, it is possible to set the 'quantity in pack' field to 0 or a negative integer. 
+This is not ideal, and poor UX, but will be fixed in due course when I have more time and knowledge.
+
+- There is a small amount of overflow on the navbar dropdown menus on the right of the screen on the smallest screens.
+This will be fixed when I have more time.
+
+- All successful messages are displayed on the same toast. It seems strange to have messages about product updates
+with shopping basket items below them. When I have more knowledge, I will decouple these messages, so that they 
+display separately.
+
+- When adding or editing a product, the newly selected image is not displayed on the add_product/edit_product pages.
+This is poor UX, as even though it is displayed on the product-detail page after the form has been submitted, 
+it leaves the user wondering whether their image has been uploaded or not. I will fix this when I have the knowledge 
+to do so. 
 
 ## Deployment:
 
