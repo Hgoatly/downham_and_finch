@@ -16,7 +16,6 @@ def about(request):
     return render(request, 'about/about.html', context)
 
 
-
 @login_required
 def edit_about(request, about_id):
     """ Edit the 'about' content """

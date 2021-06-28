@@ -25,12 +25,12 @@
         <div class="row">
             {% if user.is_superuser %}
             <div class="col-12 col-lg-4 offset-4">
-                <form method="POST" action="{% url 'edit_blog' blog.id %}" class="form mb-2" enctype="multipart/form-data">
+                <form method="POST" action="{% url 'edit_blog' blog.id %}" class="form mb-2" enctype='multipart/form-data'>
                     {% csrf_token %}
                         {{ form|crispy }}
                     <div class="text-right">
                         <a class="btn btn-outline-black" href="{% url 'blog' %}">Cancel</a>
-                        <button class="btn btn-black" type="submit">Update Faq</button>
+                        <button class="btn btn-black" type="submit">Update Post</button>
                     </div>
                 </form>
             </div>

@@ -32,7 +32,7 @@ def blog_detail(request, blog_id):
     return render(request, 'blog/blog_detail.html', context)
 
 
-
+@login_required
 def add_blog(request):
     """ View for adding blog posts """
     if not request.user.is_superuser:
@@ -40,7 +40,7 @@ def add_blog(request):
         return redirect(reverse('home'))
 
     if request.method == 'POST':
-        form = BlogForm(request.POST)
+        form = BlogForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully added post!')
@@ -77,7 +77,7 @@ def edit_blog(request, blog_id):
         return redirect(reverse('blog'))
     blog = get_object_or_404(Blog, pk=blog_id)
     if request.method == 'POST':
-        form = BlogForm(request.POST, instance=blog)
+        form = BlogForm(request.POST, request.FILES, instance=blog)
         if form.is_valid():
             form.save()
             messages.success(request, 'Blog successfully updated!')

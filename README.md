@@ -56,22 +56,30 @@
 
 ## User Stories:
 
-### New Users:
-1. I would like to be able to browse the site and make a purchase.
-2. I would like to register for an account so that I can create a profile, and so that my details will be stored for future visits..
-3. I would like to search the site so that I can find specific products.
-
-### Returning Users:
-4. I would like to be able to login to the site so that I can view/update my profile.
-5. I would like to be able to browse and search the site for new products that have been added to the site since my last visit.
-
 ### All Users:
-6. I would like to be able to reset my password should I forget it.
-7. I would like to be able to contact the site owner, so that I can ask a question, or make a complaint or a compliment.
+1. I would like to be able to browse the site, and view items, so that I can purchase them.
+2. I would like to be able to view individual product details, so that I can confirm whether the product is suitable
+3. I would like to search the site so that I can find specific products.
+4. I would like to be able to sort the items by price, product name, and product category, so that I can quickly identify products that I am interested in.
+5. I would like to easily be able to view my search results, so that I can quickly identify products that I am interested in.
+6. I would like to be able to contact the site owner, so that I can ask a question, or make a complaint or a compliment.
+7. I would like to be able to register for an account, so that I can view past orders, and view and update my billing details.
+8. I would like to be able to read about the company, so that I can find out more about them, and their aims.
+9. I would like to be able to read a list of frequently asked questions, so that I can find answers to any questions I may have.
+10. I would like to be able to read blog posts, so that I can stay in touch with any news that the company may have.
+11. I would like to be able to read reviews of products, so that I know whether they are good quality before I buy them.
+12. I would like to be able to make a secure payment when I place an order.
+13. I would like to 
+
+### Registered Users:
+8. I would like to be able to login to the site so that I can view/update my profile.
+9. I would like to be able to easily logout of the site.
+10. I would like to be able to view my profile details, including my billing address, and any past orders I may have placed.
+11. I would like to be able to submit a review of a product.
+
+### Siteowner: 
 8. I would like to be able to submit a review of the product. 
-9. I would like to be abe to login to the site with my Facebook account.
-10. I would like to be able to pay for my purchases securely using Apple Pay.
-11. I would like to be able to pay for my purchases securely using PayPal.
+
 
 
 ## Design:
