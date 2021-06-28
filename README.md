@@ -87,7 +87,8 @@
 18. I would like to be able to add frequently asked questions (faqs) to the site, so that people don't keep contacting me with the same questions.
 19. I would like to be able to edit faqs, in case a question or answer needs to be changed.
 20. I would like to be able to delete a faq, in case it is no longer relevent.
-21. 
+21. I would like to be able to delete reviews that users have posted, so that I can remove any inappropriate or offensive content that may have been posted.
+22. I would like users to be able to contact me, so that they will receive good customer service.
 
 
 ## Design:
