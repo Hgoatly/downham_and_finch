@@ -338,7 +338,7 @@ input[name='q']::placeholder {
 }
 
 .product-image {
-        zoom: 87%;
+        zoom: 80%;
     }
 
 /* Accordion */
