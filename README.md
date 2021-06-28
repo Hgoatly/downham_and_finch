@@ -1,10 +1,15 @@
 <div align="center">
+
 # **Downham and Finch**
-![Downham and Finch responsive image display](static/readme-images/hero_photo.jpg)
-- An e commerce site selling custom face masks, pet bandanas and pet bow ties.
+
+<img src="static/readme_images/hero_photo.jpg">
+
+An e commerce site selling custom face masks, pet products, lavender and drawstring bags.
+
 Visit [Downham and Finch](https://downham-and-finch.herokuapp.com/)
-## **Table of Contents:**
 </div>
+
+## **Table of Contents:**
 
 - [Site Owner Goals](#site-owner-goals)
 - [User Experience (UX)](#user-experience-ux)
