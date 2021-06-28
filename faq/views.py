@@ -7,7 +7,7 @@ from django.core.paginator import Paginator
 
 
 def faq(request):
-    faqs = Faq.objects.all()
+    faqs = Faq.objects.all().order_by('-date_posted')
     paginator = Paginator(faqs, 3)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
