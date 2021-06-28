@@ -549,7 +549,4 @@ input[name='q']::placeholder {
     .product-image {
         zoom: 70%;
     }
-    .dropdown-menu {
-        overflow: hidden; 
-    }
 }
