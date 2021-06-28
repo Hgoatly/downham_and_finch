@@ -447,6 +447,9 @@ input[name='q']::placeholder {
   #hero-logo {
         margin-top: 5rem;
     }
+    .product-image {
+        zoom: 70%;
+    }
 }
 
 /* Copied from Boutique Ado project. */
@@ -542,5 +545,8 @@ input[name='q']::placeholder {
 
     .nav-link i.fa-lg {
         font-size: 1rem;
+    }
+    .product-image {
+        zoom: 70%;
     }
 }
