@@ -78,8 +78,16 @@
 11. I would like to be able to submit a review of a product.
 
 ### Siteowner: 
-8. I would like to be able to submit a review of the product. 
-
+12. I would like to be able to add products to the site, so that I can upload new products as they become available. 
+13. I would link to be able to edit products already on the site, so that if product information changes, I can change the existing information.
+14. I would like to be able to delete products that are no longer necessary for the site.
+15. I would like to be able to upload blog posts, so that I can share news and events with my customers.
+16. I would like to be able to edit blog posts, so that I can add more information, or correct a typo.
+17. I would like to be able to delete a blog post if it is no longer relevent.
+18. I would like to be able to add frequently asked questions (faqs) to the site, so that people don't keep contacting me with the same questions.
+19. I would like to be able to edit faqs, in case a question or answer needs to be changed.
+20. I would like to be able to delete a faq, in case it is no longer relevent.
+21. 
 
 
 ## Design:
