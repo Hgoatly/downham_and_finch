@@ -1,11 +1,13 @@
 from django.test import TestCase
 from .models import Faq
 
+
 class FaqModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         # Set up immutable objects to be used by test methods.
-        Faq.objects.create(question='New Faq', answer='This is a new question.')
+        Faq.objects.create(
+            question='New Faq', answer='This is a new question.')
 
     def test_quesition_label(self):
         faq = Faq.objects.get(id=1)

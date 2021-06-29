@@ -6,7 +6,6 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Product_type
-from review.models import Review
 from .forms import ProductForm
 from django.core.paginator import Paginator
 

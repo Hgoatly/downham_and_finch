@@ -190,11 +190,7 @@ def checkout_success(request, order_number):
 
         return render(request, template, context)
 
-    # Send user back to homepage if they try and paste the url from another user's checkout confirmation. 
+    # Send user back to homepage if they try and paste the url
+    # from another user's checkout confirmation. 
     if 'user' not in request.session:
         return redirect('home')
-
-
-def payment_failure():
-    pass
-

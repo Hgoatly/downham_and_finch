@@ -50,7 +50,6 @@ class StripeWH_Handler:
             settings.DEFAULT_FROM_EMAIL,
             [settings.DEFAULT_FROM_EMAIL]
         )
-        
 
     def handle_event(self, event):
         """

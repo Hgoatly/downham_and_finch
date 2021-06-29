@@ -1,5 +1,6 @@
 from django.test import TestCase
 
+
 class TestBasketViews(TestCase):
 
     def test_basket_page(self):

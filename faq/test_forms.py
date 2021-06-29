@@ -4,7 +4,7 @@ from .forms import FaqForm
 
 class TestAboutForm(TestCase):
     def test_faq_question_is_required(self):
-        form = FaqForm({'question': ''}) 
+        form = FaqForm({'question': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('question', form.errors.keys())
         self.assertEqual(form.errors['question'][0], 'This field is required.')
@@ -18,4 +18,3 @@ class TestAboutForm(TestCase):
     def test_fields_are_in_form_metaclass(self):
         form = FaqForm()
         self.assertEqual(form.Meta.fields, ['question', 'answer'])
-

@@ -1,5 +1,6 @@
 from django.test import TestCase
 
+
 class TestFaqViews(TestCase):
 
     def test_about_page(self):

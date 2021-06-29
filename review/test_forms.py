@@ -4,7 +4,7 @@ from .forms import ReviewForm
 
 class TestReviewForm(TestCase):
     def test_product_is_required(self):
-        form = ReviewForm({'product': ''}) 
+        form = ReviewForm({'product': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('product', form.errors.keys())
         self.assertEqual(form.errors['product'][0], 'This field is required.')

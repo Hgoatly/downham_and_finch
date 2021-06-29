@@ -1,5 +1,6 @@
 from django.test import TestCase
 
+
 class TestBlogViews(TestCase):
 
     def test_blog_page(self):

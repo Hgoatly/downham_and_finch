@@ -348,7 +348,14 @@ In future I would like to add the following features:
 
 - The image below was produced using the [Draw SQL app](#https://drawsql.app/)
 
-![Data Model](static/readme-images/database_diagram.jpg)
+<img src="static/readme_images/database_diagram.jpg">
+
+## Accessibility:
+
+### Alt Tags:
+
+In order to ensure that all images are accessible for those using a screen reader, I have ensured that all images used 
+throughout the site include alt tags.
 
 ## Testing:
 

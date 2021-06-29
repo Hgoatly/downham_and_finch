@@ -34,8 +34,8 @@ def add_review(request, product_id):
             messages.error(
                 request, 'Review not added. Please check your form.')
     else:
-        initial = { 'product': product }
-        form = ReviewForm(initial = initial)
+        initial = {'product': product}
+        form = ReviewForm(initial=initial)
         form.fields['product'].widget = forms.HiddenInput()
 
     template = 'review/add_review.html'
@@ -57,4 +57,3 @@ def delete_review(request, review_id):
     review.delete()
     messages.success(request, 'Review deleted!')
     return redirect(reverse('review'))
-
