@@ -23,7 +23,6 @@ class Product_typeAdmin(admin.ModelAdmin):
         'name',
     )
 
+
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Product_type, Product_typeAdmin)
-
-

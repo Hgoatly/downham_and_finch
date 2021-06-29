@@ -2,6 +2,7 @@ from django.test import TestCase
 from .models import Product
 from django.shortcuts import get_object_or_404
 
+
 class TestProductViews(TestCase):
 
     def test_all_products_page(self):

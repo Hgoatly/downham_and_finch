@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect
 from django.conf import settings
 from .forms import ContactForm
 
+
 def contact(request):
     """ Customer contact form view """
     contact_form = ContactForm

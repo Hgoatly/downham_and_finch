@@ -4,22 +4,23 @@ from .forms import ProductForm
 
 class TestProductForm(TestCase):
     def test_name_is_required(self):
-        form = ProductForm({'name': ''}) 
+        form = ProductForm({'name': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('name', form.errors.keys())
         self.assertEqual(form.errors['name'][0], 'This field is required.')
 
     def test_sku_is_required(self):
-        form = ProductForm({'sku': ''}) 
+        form = ProductForm({'sku': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('sku', form.errors.keys())
         self.assertEqual(form.errors['sku'][0], 'This field is required.')
 
     def test_description_is_required(self):
-        form = ProductForm({'description': ''}) 
+        form = ProductForm({'description': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('description', form.errors.keys())
-        self.assertEqual(form.errors['description'][0], 'This field is required.')
+        self.assertEqual(
+            form.errors['description'][0], 'This field is required.')
 
     def test_price_is_required(self):
         form = ProductForm({'price': ''}) 
@@ -32,8 +33,10 @@ class TestProductForm(TestCase):
         self.assertTrue(form.is_valid)
 
     def test_display_name_field_is_not_required(self):
-        form = ProductForm({'product_type': 'Test Product Type', 'sku': 'Test Sku', 
-                            'name': 'Test Name', 'display_name': 'Test Display'})
+        form = ProductForm({'product_type': 'Test Product Type', 
+                            'sku': 'Test Sku', 
+                            'name': 'Test Name', 
+                            'display_name': 'Test Display'})
         self.assertTrue(form.is_valid)
 
     def test_colour_field_is_not_required(self):
