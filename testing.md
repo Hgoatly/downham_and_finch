@@ -9,6 +9,7 @@ The Downham and Finch site was tested extensively, using the following processes
 - [W3c Markup Validation Service](#W3c-Markup-Validation-Service)
 - [W3c CSS Validation Service](#W3c-CSS-Validation-Service)
 - [JSHint](#JSHint)
+- [Python Validation](#Python-Validation)
 - [Automated Testing](#Automated-Testing)
 - [Testing the User Stories](#Testing-the-User-Stories)
     - [Create](#)
@@ -43,6 +44,15 @@ There were, however, a number of warnings. These mainly related to the use of 'a
 There were additional warnings due to the use of 'zoom' that was used to make the images aesthetically pleasing on the site.
 
 <img src="static/testing_images/w3_css_warnings.jpg">
+
+### Python Validation:
+
+- Flake8 was used to check for any errors in the Python code, and where appropriate it was refactored. Migrations
+were not refactored, nor was any code where the variables or file names made the lines too long. All other 
+Python code was passed through the [Pep8 Online Linter](#http://pep8online.com/), where it passed with no errors or 
+warnings.
+
+<img src="static/testing_images/pep8.jpg">
 
 ### Automated Testing:
 

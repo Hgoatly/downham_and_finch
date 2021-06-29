@@ -7,7 +7,9 @@ class BlogModelTest(TestCase):
     def setUpTestData(cls):
         # Set up immutable objects to be
         # used by test methods.
-        Blog.objects.create(title='New Blog', content='This is a new Blog post.')
+        Blog.objects.create(
+            title='New Blog',
+            content='This is a new Blog post.')
 
     def test_title_label(self):
         blog = Blog.objects.get(id=1)
