@@ -12,6 +12,7 @@ The Downham and Finch site was tested extensively, using the following processes
 - [Automated Testing](#Automated-Testing)
 - [Testing the User Stories](#Testing-the-User-Stories)
     - [Create](#)
+- [Testing Stripe Payments](#Testing-Stripe-Payments)
 
 
 ### Chrome Developer Tools:
