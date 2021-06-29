@@ -1,10 +1,12 @@
 from django.test import TestCase
 from .models import Blog
 
+
 class BlogModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
-        # Set up immutable objects to be used by test methods.
+        # Set up immutable objects to be
+        # used by test methods.
         Blog.objects.create(title='New Blog', content='This is a new Blog post.')
 
     def test_title_label(self):

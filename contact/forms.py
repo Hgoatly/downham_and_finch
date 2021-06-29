@@ -1,5 +1,6 @@
 from django import forms
 
+
 class ContactForm(forms.Form):
     name = forms.CharField(max_length=20, required=True)
     email = forms.EmailField(max_length=20, required=True)
@@ -18,4 +19,4 @@ class ContactForm(forms.Form):
         'email': 'email',
         'message': 'message',
     }
-        
+    

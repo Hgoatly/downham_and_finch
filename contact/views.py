@@ -10,7 +10,7 @@ def contact(request):
     contact_form = ContactForm
     if request.method == "POST":
         form = contact_form(data=request.POST)
-    
+
         if form.is_valid():
             name = request.POST.get('name', '')
             email = request.POST.get('email', '')
