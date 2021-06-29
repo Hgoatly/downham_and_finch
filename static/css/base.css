@@ -354,9 +354,6 @@ input[name='q']::placeholder {
     color: #fff;
 }
 
-.btn-sm {
-    font-size: 0.7rem;
-}
 
 .small-checkout-button {
     border-style: solid;
@@ -542,5 +539,9 @@ input[name='q']::placeholder {
     }
     .product-image {
         zoom: 70%;
+    }
+
+    .btn {
+        font-size: 0.7rem;
     }
 }
