@@ -86,6 +86,9 @@
                             {% endif %}
                             <div class="card-body pb-0">
                                 <p class="mb-0">{{ product.display_name }}</p>
+                                {% if product.quantity_in_pack %}
+                                <p class="mb-0">Pack of {{ product.quantity_in_pack }}</p>
+                                {% endif %}
                             </div>
                             <div class="card-footer bg-white pt-0 border-0 text-left">
                                 <div class="row">
