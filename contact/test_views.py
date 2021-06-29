@@ -1,5 +1,6 @@
 from django.test import TestCase
 
+
 class TestContactViews(TestCase):
 
     def test_contact_page(self):

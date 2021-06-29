@@ -18,5 +18,4 @@ class ContactForm(forms.Form):
         'email': 'email',
         'message': 'message',
     }
-
         

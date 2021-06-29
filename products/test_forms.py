@@ -23,7 +23,7 @@ class TestProductForm(TestCase):
             form.errors['description'][0], 'This field is required.')
 
     def test_price_is_required(self):
-        form = ProductForm({'price': ''}) 
+        form = ProductForm({'price': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('price', form.errors.keys())
         self.assertEqual(form.errors['price'][0], 'This field is required.')
@@ -33,15 +33,17 @@ class TestProductForm(TestCase):
         self.assertTrue(form.is_valid)
 
     def test_display_name_field_is_not_required(self):
-        form = ProductForm({'product_type': 'Test Product Type', 
-                            'sku': 'Test Sku', 
-                            'name': 'Test Name', 
+        form = ProductForm({'product_type': 'Test Product Type',
+                            'sku': 'Test Sku',
+                            'name': 'Test Name',
                             'display_name': 'Test Display'})
         self.assertTrue(form.is_valid)
 
     def test_colour_field_is_not_required(self):
-        form = ProductForm({'product_type': 'Test Product Type', 'sku': 'Test Sku', 
-                            'name': 'Test Name', 'display_name': 'Test Display',
+        form = ProductForm({'product_type': 'Test Product Type',
+                            'sku': 'Test Sku',
+                            'name': 'Test Name',
+                            'display_name': 'Test Display',
                             'colour': 'Test Colour'})
         self.assertTrue(form.is_valid)
 

@@ -11,7 +11,7 @@ from .forms import ProductForm
 
 def all_products(request):
     """ A view to show all products, including sorting and
-    search queries. This view copied and adapted from 
+    search queries. This view copied and adapted from
     the Boutique Ado project"""
 
     products = Product.objects.all()
@@ -91,7 +91,8 @@ def add_product(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Product not added. Please check your form.')
+            messages.error(
+                request, 'Product not added. Please check your form.')
     else:
         form = ProductForm()
     template = 'products/add_product.html'
