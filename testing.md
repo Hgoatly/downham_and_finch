@@ -269,6 +269,10 @@ This failed as expected, and feedback was given on the payment page.
 
 - A confirmation email was sent to the customer, and also to the site owner.
 
+<img src="static/testing_images/order_confirmation_email.jpg">
+
+<img src="static/testing_images/vendor_order_confirmation_email.jpg">
+
 ### Manual Cross Browser Compatibility Testing:
 
 - Manual tests were carried out in Chrome, Firefox, Opera, Microsoft Edge and iOs. The results are detailed in the table below:
