@@ -8,13 +8,11 @@ The Downham and Finch site was tested extensively, using the following processes
 - [Lighthouse](#Lighthouse)
 - [W3c Markup Validation Service](#W3c-Markup-Validation-Service)
 - [W3c CSS Validation Service](#W3c-CSS-Validation-Service)
-- [JSHint](#JSHint)
 - [Python Validation](#Python-Validation)
 - [Automated Testing](#Automated-Testing)
 - [Testing the User Stories](#Testing-the-User-Stories)
 - [Testing Stripe Payments](#Testing-Stripe-Payments)
 - [Manual Cross Browser Compatibility Testing](#Manual-Cross-Browser-Compatibility-Testing)
-
 
 ### Chrome Developer Tools:
 
@@ -253,6 +251,23 @@ Pass/Fail: Pass.
     - Reviews (forms and views)
 
 All tests passed with no issues.
+
+### Testing Stripe Payments: 
+
+- Stripe payments were tested with two different test card numbers. The first number was designed to succeed. It was successful:
+
+<img src="static/testing_images/stripe_success.jpg">
+
+<img src="static/testing_images/checkout_success_image.jpg">
+
+- The second test card number was designed to fail, with feedback being given that there were insufficient funds. 
+This failed as expected, and feedback was given on the payment page.
+
+<img src="static/testing_images/stripe_insufficient_funds.jpg">
+
+<img src="static/testing_images/stripe_fail.jpg">
+
+- A confirmation email was sent to the customer, and also to the site owner.
 
 ### Manual Cross Browser Compatibility Testing:
 

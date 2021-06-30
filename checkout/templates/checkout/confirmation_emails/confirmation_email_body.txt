@@ -11,6 +11,6 @@ Grand Total: £{{ order.grand_total }}
 
 Your order will be shipped to {{order.street_address1 }} in {{ order.town_or_city }}, {{ order.country }}.
 
-If you have any questions, pleas contact us as {{ contact_email }}.
+If you have any questions, please contact us as {{ contact_email }}.
 
 Thank you for shopping with Downham and Finch.
