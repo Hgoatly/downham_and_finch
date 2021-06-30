@@ -339,6 +339,7 @@ In future I would like to add the following features:
 - **Delivery Address**: I would like users to be able to specify different billing and delivery addresses.
 - **Paypal**: I would like users to be able to pay for their items using Paypal.
 - **Apple Pay**: I would like users to be able to pay for their items using Apple Pay.
+- **Documentation**: More photos will be added to the documentaion, in order to make explanations more explicit.
 
 ## Technologies used:
 
