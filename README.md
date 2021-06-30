@@ -61,6 +61,9 @@ Visit [Downham and Finch](https://downham-and-finch.herokuapp.com/)
 
 ## Site Owner Goals:
 
+The Downham and Finch website is a real world application, designed for friends Helen Downham and Emily Finch, as a way of selling 
+and marketing their handmade textile products.
+
 1. The site owner's primary goal is to sell their products to new and returning customers.
 2. The secondary goal is to showcase new products that are available to new and returning customers. 
 
@@ -296,18 +299,22 @@ the site:
 - **Sort**: Any user can sort the products by price, name or category.
 - **Search**: Any user can search the site using keywords.
 - **Checkout**: Any user can make a secure purchase using Stripe.
-- **Add Product**: The superusers(Admin) can add products to the database.
-- **Edit Product**: The superuser(Admin) can edit products that are already in the database.
-- **Delete Product**: The superuser(Admin) can delete products that are already in the database.
-- **Edit Content**: The superuser(Admin) can edit the content on the 'About' page.
-- **Add Blog**: The superuser(Admin) can add a post to the 'Blog page'.
-- **Edit Blog**: The superuser(Admin) can edit a blog post.
-- **Delete Blog**: The superuser(Admin) can delete a blog post.
-- **Add Faq**: The superuser(Admin) can add a Faq.
-- **Edit Faq**: The superuser(Admin) can edit a Faq.
-- **Delete Faq**: The superuser(Admin) can delete a Faq.
+- **Add Product**: The superuser (Admin) can add products to the database.
+- **Edit Product**: The superuser (Admin) can edit products that are already in the database.
+- **Delete Product**: The superuser (Admin) can delete products that are already in the database.
+- **Edit Content**: The superuser (Admin) can edit the content on the 'About' page.
+- **Add Blog**: The superuser (Admin) can add a post to the 'Blog page'.
+- **Edit Blog**: The superuser (Admin) can edit a blog post.
+- **Delete Blog**: The superuser (Admin) can delete a blog post.
+- **Add Faq**: The superuser (Admin) can add a Faq.
+- **Edit Faq**: The superuser (Admin) can edit a Faq.
+- **Delete Faq**: The superuser (Admin) can delete a Faq.
 - **Add Review**: A logged in and registered user can add a review.
-- **Delete Review**: The superuser(Admin) can delete a review.
+- **Delete Review**: The superuser (Admin) can delete a review.
+- **About**: The Superuser (Admin) can update the 'About' section. It is NOT possible to delete the 'About' section. 
+There is currently no image on the 'About' page, although the Model is set up to be able to accept one. This is because
+the site is a real world application, and the business owner may decide that they would like an image there in future. 
+This would otherwise mean a lot of work for the developer.
 
 #### Future Features:
 
