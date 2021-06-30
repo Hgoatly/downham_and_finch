@@ -229,12 +229,55 @@ Expected Result: The superuser can upload, edit and delete faqs.
 Actual Result: superuser can upload, edit and delete faqs.
 Pass/Fail: Pass.
 
-- User Story 27 is concerned with feleting reviews.
+- User Story 27 is concerned with deleting reviews.
 
 Test Case 22
 Ensure that the superuser can delete reviews.
 Expected Result: The superuser can delete reviews.
 Actual Result: superuser can delete reviews.
+Pass/Fail: Pass.
+
+### Testing the Visitor goals:
+
+- I would like to browse the site and make a purchase.
+- I would like to be able to browse the site for new products that may have been added since my last visit.
+
+Test Case 1
+Ensure that all users can view and purchase products.
+Expected Result: All users can view and purchase products.
+Actual Result: All users can view and purchase products.
+Pass/Fail: Pass.
+
+- I would like to register for an account.
+
+Test Case 2
+Ensure that all users can register for an account.
+Expected Result: All users can register for an account.
+Actual Result: All users can register for an account.
+Pass/Fail: Pass.
+
+- I would like to learn about the company, read some reviews and faqs, and be able to contact the business owner.
+
+Test Case 3
+Ensure that all users can learn about the company, read some reviews and faqs, and contact the business owner.
+Expected Result: All users can learn about the company, read some reviews and faqs, and contact the business owner.
+Actual Result: All users can learn about the company, read some reviews and faqs, and contact the business owner.
+Pass/Fail: Pass.
+
+- I would like to be able to view my profile.
+
+Test Case 4
+Ensure that all logged in users can view their profile.
+Expected Result: All logged in users can view their profile.
+Actual Result: All logged in users can view their profile.
+Pass/Fail: Pass.
+
+- I would like to be able to add a review for a product I have purchased.
+
+Test Case 5
+Ensure that all logged in users can leave a review.
+Expected Result: All logged in users can leave a review.
+Actual Result: All logged in users can leave a review.
 Pass/Fail: Pass.
 
 ### Automated Testing:

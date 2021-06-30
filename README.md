@@ -14,9 +14,11 @@ Visit [Downham and Finch](https://downham-and-finch.herokuapp.com/)
 - [Site Owner Goals](#site-owner-goals)
 - [User Experience (UX)](#user-experience-ux)
   - [User Stories](#user-stories)
+    - [All Users](#All-Users)
+    - [Registered Users](#Registered-Users)
+    - [Siteowner](#Siteowner)
     - [First Time Visitor Goals](#first-time-visitor-goals)
     - [Returning Visitor Goals](#returning-visitor-goals)
-    - [Frequent Visitor Goals](#frequent-visitor-goals)
   - [Design](#Design)
     - [Imagery](#imagery)
     - [Colours Used](#colours-used)
@@ -103,6 +105,17 @@ and marketing their handmade textile products.
 27. I would like to be able to delete reviews that users have posted, so that I can remove any inappropriate or offensive content that may have been posted.
 28. I would like users to be able to contact me, so that they will receive good customer service.
 
+### First Time Visitor Goals:
+
+- I would like to browse the site and make a purchase.
+- I would like to register for an account.
+- I would like to learn about the company, read some reviews and faqs, and be able to contact the business owner.
+
+### Returning Visitor Goals:
+
+- I would like to be able to view my profile.
+- I would like to be able to add a review for a product I have purchased.
+- I would like to be able to browse the site for new products that may have been added since my last visit.
 
 ## Design:
 
