@@ -57,6 +57,7 @@ Visit [Downham and Finch](https://downham-and-finch.herokuapp.com/)
 - [Credits](#credits)
 - [Version Control](#version-control)
 
+# UX:
 
 ## Site Owner Goals:
 
@@ -78,26 +79,26 @@ Visit [Downham and Finch](https://downham-and-finch.herokuapp.com/)
 10. I would like to be able to read blog posts, so that I can stay in touch with any news that the company may have.
 11. I would like to be able to read reviews of products, so that I know whether they are good quality before I buy them.
 12. I would like to be able to make a secure payment when I place an order.
-13. I would like to 
+13. I would like to receive feedback about whether or not my order was successful.
+14. I would like to receive an email confirmation once I have placed an order.
 
 ### Registered Users:
-8. I would like to be able to login to the site so that I can view/update my profile.
-9. I would like to be able to easily logout of the site.
-10. I would like to be able to view my profile details, including my billing address, and any past orders I may have placed.
-11. I would like to be able to submit a review of a product.
+15. I would like to be able to login to the site so that I can view/update my profile.
+16. I would like to be able to easily logout of the site.
+17. I would like to be able to submit a review of a product.
 
 ### Siteowner: 
-12. I would like to be able to add products to the site, so that I can upload new products as they become available. 
-13. I would link to be able to edit products already on the site, so that if product information changes, I can change the existing information.
-14. I would like to be able to delete products that are no longer necessary for the site.
-15. I would like to be able to upload blog posts, so that I can share news and events with my customers.
-16. I would like to be able to edit blog posts, so that I can add more information, or correct a typo.
-17. I would like to be able to delete a blog post if it is no longer relevent.
-18. I would like to be able to add frequently asked questions (faqs) to the site, so that people don't keep contacting me with the same questions.
-19. I would like to be able to edit faqs, in case a question or answer needs to be changed.
-20. I would like to be able to delete a faq, in case it is no longer relevent.
-21. I would like to be able to delete reviews that users have posted, so that I can remove any inappropriate or offensive content that may have been posted.
-22. I would like users to be able to contact me, so that they will receive good customer service.
+18. I would like to be able to add products to the site, so that I can upload new products as they become available. 
+19. I would link to be able to edit products already on the site, so that if product information changes, I can change the existing information.
+20. I would like to be able to delete products that are no longer necessary for the site.
+21. I would like to be able to upload blog posts, so that I can share news and events with my customers.
+22. I would like to be able to edit blog posts, so that I can add more information, or correct a typo.
+23. I would like to be able to delete a blog post if it is no longer relevent.
+24. I would like to be able to add frequently asked questions (faqs) to the site, so that people don't keep contacting me with the same questions.
+25. I would like to be able to edit faqs, in case a question or answer needs to be changed.
+26. I would like to be able to delete a faq, in case it is no longer relevent.
+27. I would like to be able to delete reviews that users have posted, so that I can remove any inappropriate or offensive content that may have been posted.
+28. I would like users to be able to contact me, so that they will receive good customer service.
 
 
 ## Design:
@@ -363,7 +364,7 @@ Information about tests carried out can be found in a separate [testing.md](test
 
 ### Known Bugs and Fixes:
 
-- On the edit product form, it is possible to set the 'quantity in pack' field to 0 or a negative integer. 
+- On the edit product form, as well as the add product form, it is possible to set the 'quantity in pack' field to 0 or a negative integer. 
 This is not ideal, and poor UX, but will be fixed in due course when I have more time and knowledge.
 
 - There is a small amount of overflow on the navbar dropdown menus on the right of the screen on the smallest screens.
@@ -376,7 +377,7 @@ display separately.
 - When adding or editing a product, the newly selected image is not displayed on the add_product/edit_product pages.
 This is poor UX, as even though it is displayed on the product-detail page after the form has been submitted, 
 it leaves the user wondering whether their image has been uploaded or not. I will fix this when I have the knowledge 
-to do so. 
+to do so.
 
 ## Deployment:
 
@@ -547,6 +548,24 @@ the corresponding file, then it is in error, and should have been acknowledged.
 
 -**W3 Schools**: W3 Schools was referenced for debugging purposes.
 
+### Images: 
+
+- All face mask images are the property of Downham and Finch, and were taken from the Downham and Finch Etsy Page. As this project is a real world application
+for the company 'Downham and Finch', doing this was within copyright guidelines.
+
+- All pet bandana images that are not modelled by pets, are the property of Downham and Finch, and were taken from the Downham and Finch Etsy Page. As this project is a real world application
+for the company 'Downham and Finch', doing this was within copyright guidelines.
+
+- The pink and white pet bow tie image is the property of Downham and Finch, and was taken from the Downham and Finch Etsy Page. As this project is a real world application
+for the company 'Downham and Finch', doing this was within copyright guidelines.
+
+- All other product images (including the 'noimage' image) are from Shuttertock (I have a premium account).
+
+- The background image on the homepage is from [Unsplash]()
+
+### Content:
+
+- All content on the site was either taken from the Downham and Finch Etsy and Facebook pages, or written by the developer.
 
 ## Acknowledgements:
 
